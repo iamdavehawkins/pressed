@@ -1,0 +1,3634 @@
+This file is a merged representation of the entire codebase, combined into a single document by Repomix.
+
+<file_summary>
+This section contains a summary of this file.
+
+<purpose>
+This file contains a packed representation of the entire repository's contents.
+It is designed to be easily consumable by AI systems for analysis, code review,
+or other automated processes.
+</purpose>
+
+<file_format>
+The content is organized as follows:
+1. This summary section
+2. Repository information
+3. Directory structure
+4. Repository files (if enabled)
+5. Multiple file entries, each consisting of:
+  - File path as an attribute
+  - Full contents of the file
+</file_format>
+
+<usage_guidelines>
+- This file should be treated as read-only. Any changes should be made to the
+  original repository files, not this packed version.
+- When processing this file, use the file path to distinguish
+  between different files in the repository.
+- Be aware that this file may contain sensitive information. Handle it with
+  the same level of security as you would the original repository.
+</usage_guidelines>
+
+<notes>
+- Some files may have been excluded based on .gitignore rules and Repomix's configuration
+- Binary files are not included in this packed representation. Please refer to the Repository Structure section for a complete list of file paths, including binary files
+- Files matching patterns in .gitignore are excluded
+- Files matching default ignore patterns are excluded
+- Files are sorted by Git change count (files with more changes are at the bottom)
+</notes>
+
+</file_summary>
+
+<directory_structure>
+public/
+  vite.svg
+src/
+  assets/
+    react.svg
+  components/
+    ColorPicker.jsx
+    ExportButton.jsx
+    Preview.jsx
+    Sidebar.jsx
+  context/
+    EPContext.jsx
+  utils/
+    storage.js
+  App.jsx
+  index.css
+  main.jsx
+.gitignore
+eslint.config.js
+index.html
+package.json
+README.md
+vite.config.js
+</directory_structure>
+
+<files>
+This section contains the contents of the repository's files.
+
+<file path="public/vite.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="31.88" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 257"><defs><linearGradient id="IconifyId1813088fe1fbc01fb466" x1="-.828%" x2="57.636%" y1="7.652%" y2="78.411%"><stop offset="0%" stop-color="#41D1FF"></stop><stop offset="100%" stop-color="#BD34FE"></stop></linearGradient><linearGradient id="IconifyId1813088fe1fbc01fb467" x1="43.376%" x2="50.316%" y1="2.242%" y2="89.03%"><stop offset="0%" stop-color="#FFEA83"></stop><stop offset="8.333%" stop-color="#FFDD35"></stop><stop offset="100%" stop-color="#FFA800"></stop></linearGradient></defs><path fill="url(#IconifyId1813088fe1fbc01fb466)" d="M255.153 37.938L134.897 252.976c-2.483 4.44-8.862 4.466-11.382.048L.875 37.958c-2.746-4.814 1.371-10.646 6.827-9.67l120.385 21.517a6.537 6.537 0 0 0 2.322-.004l117.867-21.483c5.438-.991 9.574 4.796 6.877 9.62Z"></path><path fill="url(#IconifyId1813088fe1fbc01fb467)" d="M185.432.063L96.44 17.501a3.268 3.268 0 0 0-2.634 3.014l-5.474 92.456a3.268 3.268 0 0 0 3.997 3.378l24.777-5.718c2.318-.535 4.413 1.507 3.936 3.838l-7.361 36.047c-.495 2.426 1.782 4.5 4.151 3.78l15.304-4.649c2.372-.72 4.652 1.36 4.15 3.788l-11.698 56.621c-.732 3.542 3.979 5.473 5.943 2.437l1.313-2.028l72.516-144.72c1.215-2.423-.88-5.186-3.54-4.672l-25.505 4.922c-2.396.462-4.435-1.77-3.759-4.114l16.646-57.705c.677-2.35-1.37-4.583-3.769-4.113Z"></path></svg>
+</file>
+
+<file path="src/assets/react.svg">
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img" class="iconify iconify--logos" width="35.93" height="32" preserveAspectRatio="xMidYMid meet" viewBox="0 0 256 228"><path fill="#00D8FF" d="M210.483 73.824a171.49 171.49 0 0 0-8.24-2.597c.465-1.9.893-3.777 1.273-5.621c6.238-30.281 2.16-54.676-11.769-62.708c-13.355-7.7-35.196.329-57.254 19.526a171.23 171.23 0 0 0-6.375 5.848a155.866 155.866 0 0 0-4.241-3.917C100.759 3.829 77.587-4.822 63.673 3.233C50.33 10.957 46.379 33.89 51.995 62.588a170.974 170.974 0 0 0 1.892 8.48c-3.28.932-6.445 1.924-9.474 2.98C17.309 83.498 0 98.307 0 113.668c0 15.865 18.582 31.778 46.812 41.427a145.52 145.52 0 0 0 6.921 2.165a167.467 167.467 0 0 0-2.01 9.138c-5.354 28.2-1.173 50.591 12.134 58.266c13.744 7.926 36.812-.22 59.273-19.855a145.567 145.567 0 0 0 5.342-4.923a168.064 168.064 0 0 0 6.92 6.314c21.758 18.722 43.246 26.282 56.54 18.586c13.731-7.949 18.194-32.003 12.4-61.268a145.016 145.016 0 0 0-1.535-6.842c1.62-.48 3.21-.974 4.76-1.488c29.348-9.723 48.443-25.443 48.443-41.52c0-15.417-17.868-30.326-45.517-39.844Zm-6.365 70.984c-1.4.463-2.836.91-4.3 1.345c-3.24-10.257-7.612-21.163-12.963-32.432c5.106-11 9.31-21.767 12.459-31.957c2.619.758 5.16 1.557 7.61 2.4c23.69 8.156 38.14 20.213 38.14 29.504c0 9.896-15.606 22.743-40.946 31.14Zm-10.514 20.834c2.562 12.94 2.927 24.64 1.23 33.787c-1.524 8.219-4.59 13.698-8.382 15.893c-8.067 4.67-25.32-1.4-43.927-17.412a156.726 156.726 0 0 1-6.437-5.87c7.214-7.889 14.423-17.06 21.459-27.246c12.376-1.098 24.068-2.894 34.671-5.345a134.17 134.17 0 0 1 1.386 6.193ZM87.276 214.515c-7.882 2.783-14.16 2.863-17.955.675c-8.075-4.657-11.432-22.636-6.853-46.752a156.923 156.923 0 0 1 1.869-8.499c10.486 2.32 22.093 3.988 34.498 4.994c7.084 9.967 14.501 19.128 21.976 27.15a134.668 134.668 0 0 1-4.877 4.492c-9.933 8.682-19.886 14.842-28.658 17.94ZM50.35 144.747c-12.483-4.267-22.792-9.812-29.858-15.863c-6.35-5.437-9.555-10.836-9.555-15.216c0-9.322 13.897-21.212 37.076-29.293c2.813-.98 5.757-1.905 8.812-2.773c3.204 10.42 7.406 21.315 12.477 32.332c-5.137 11.18-9.399 22.249-12.634 32.792a134.718 134.718 0 0 1-6.318-1.979Zm12.378-84.26c-4.811-24.587-1.616-43.134 6.425-47.789c8.564-4.958 27.502 2.111 47.463 19.835a144.318 144.318 0 0 1 3.841 3.545c-7.438 7.987-14.787 17.08-21.808 26.988c-12.04 1.116-23.565 2.908-34.161 5.309a160.342 160.342 0 0 1-1.76-7.887Zm110.427 27.268a347.8 347.8 0 0 0-7.785-12.803c8.168 1.033 15.994 2.404 23.343 4.08c-2.206 7.072-4.956 14.465-8.193 22.045a381.151 381.151 0 0 0-7.365-13.322Zm-45.032-43.861c5.044 5.465 10.096 11.566 15.065 18.186a322.04 322.04 0 0 0-30.257-.006c4.974-6.559 10.069-12.652 15.192-18.18ZM82.802 87.83a323.167 323.167 0 0 0-7.227 13.238c-3.184-7.553-5.909-14.98-8.134-22.152c7.304-1.634 15.093-2.97 23.209-3.984a321.524 321.524 0 0 0-7.848 12.897Zm8.081 65.352c-8.385-.936-16.291-2.203-23.593-3.793c2.26-7.3 5.045-14.885 8.298-22.6a321.187 321.187 0 0 0 7.257 13.246c2.594 4.48 5.28 8.868 8.038 13.147Zm37.542 31.03c-5.184-5.592-10.354-11.779-15.403-18.433c4.902.192 9.899.29 14.978.29c5.218 0 10.376-.117 15.453-.343c-4.985 6.774-10.018 12.97-15.028 18.486Zm52.198-57.817c3.422 7.8 6.306 15.345 8.596 22.52c-7.422 1.694-15.436 3.058-23.88 4.071a382.417 382.417 0 0 0 7.859-13.026a347.403 347.403 0 0 0 7.425-13.565Zm-16.898 8.101a358.557 358.557 0 0 1-12.281 19.815a329.4 329.4 0 0 1-23.444.823c-7.967 0-15.716-.248-23.178-.732a310.202 310.202 0 0 1-12.513-19.846h.001a307.41 307.41 0 0 1-10.923-20.627a310.278 310.278 0 0 1 10.89-20.637l-.001.001a307.318 307.318 0 0 1 12.413-19.761c7.613-.576 15.42-.876 23.31-.876H128c7.926 0 15.743.303 23.354.883a329.357 329.357 0 0 1 12.335 19.695a358.489 358.489 0 0 1 11.036 20.54a329.472 329.472 0 0 1-11 20.722Zm22.56-122.124c8.572 4.944 11.906 24.881 6.52 51.026c-.344 1.668-.73 3.367-1.15 5.09c-10.622-2.452-22.155-4.275-34.23-5.408c-7.034-10.017-14.323-19.124-21.64-27.008a160.789 160.789 0 0 1 5.888-5.4c18.9-16.447 36.564-22.941 44.612-18.3ZM128 90.808c12.625 0 22.86 10.235 22.86 22.86s-10.235 22.86-22.86 22.86s-22.86-10.235-22.86-22.86s10.235-22.86 22.86-22.86Z"></path></svg>
+</file>
+
+<file path="src/components/ColorPicker.jsx">
+export default function ColorPicker({ label, value, onChange }) {
+  return (
+    <div>
+      <label className="text-xs text-zinc-400 mb-1 block">{label}</label>
+      <div className="flex items-center gap-2">
+        <div className="relative w-8 h-8 flex-shrink-0">
+          <input
+            type="color"
+            value={value}
+            onChange={(e) => onChange(e.target.value)}
+            className="absolute inset-0 w-full h-full opacity-0 cursor-pointer z-10"
+            title="Click to pick color"
+          />
+          <div
+            className="absolute inset-0 rounded cursor-pointer border-2 border-zinc-600 hover:border-amber-500 transition-colors pointer-events-none"
+            style={{ backgroundColor: value }}
+            aria-hidden="true"
+          />
+        </div>
+        <input
+          type="text"
+          value={value}
+          onChange={(e) => onChange(e.target.value)}
+          className="flex-1 min-w-0 bg-zinc-800 border border-zinc-700 rounded px-2 py-1.5 text-white text-xs font-mono focus:outline-none focus:border-amber-500 uppercase"
+          placeholder="#000000"
+        />
+      </div>
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/ExportButton.jsx">
+import { useState } from 'react';
+import { useEP } from '../context/EPContext';
+import { Download, Loader2 } from 'lucide-react';
+import JSZip from 'jszip';
+
+function fileToBase64(file) {
+  return new Promise((resolve, reject) => {
+    const reader = new FileReader();
+    reader.onload = () => resolve(reader.result);
+    reader.onerror = reject;
+    reader.readAsDataURL(file);
+  });
+}
+
+const platformSVGs = {
+  spotify: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 30.6 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/></svg>`,
+  appleMusic: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>`,
+  youtubeMusic: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>`,
+  tidal: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 9l3-3 3 3-3 3-3-3zm6 0l3-3 3 3-3 3-3-3zm6 0l3-3 3 3-3 3-3-3zm-6 6l3-3 3 3-3 3-3-3z"/></svg>`,
+  amazonMusic: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 10.2 35.4 37.5 45.3 46.8l56.8-56S341 288.9 341 261.4V114.3C341 89 316.5 32 228.7 32 140.7 32 94 87 94 136.3l73.5 6.8c16.3-49.5 54.2-49.5 54.2-49.5 40.7-.1 35.5 29.8 35.5 69.1zm0 86.8c0 80-84.2 68-84.2 17.2 0-47.2 50.5-56.7 84.2-57.8v40.6zm136 163.5c-7.7 10-70 67-174.5 67S34.2 408.5 9.7 379c-6.8-7.7 1-11.3 5.5-8.3C88.5 415.2 203 488.5 387.7 401c7.5-3.7 13.3 2 5.5 12zm39.8 2.2c-6.5 15.8-16 26.8-21.2 31-5.5 4.5-9.5 2.7-6.5-3.8s19.3-46.5 12.7-55c-6.5-8.3-37-4.3-48-3.2-10.8 1-13 2-14-.3-2.3-5.7 21.7-15.5 37.5-17.5 15.7-1.8 41-.8 46 5.7 3.7 5.1 0 27.1-6.5 43.1z"/></svg>`,
+  behindTheScenes: `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>`,
+};
+
+const platformLabels = {
+  spotify: 'Spotify',
+  appleMusic: 'Apple Music',
+  youtubeMusic: 'YouTube Music',
+  tidal: 'Tidal',
+  amazonMusic: 'Amazon Music',
+  behindTheScenes: 'Behind the Scenes',
+};
+
+function generateStreamingLinksHTML(epData) {
+  const validLinks = epData.streamingLinks.filter(l => l.platform && !l.error);
+  if (validLinks.length === 0) return '';
+  
+  const linksHTML = validLinks.map(link => `
+                <a href="${link.url}" class="stream-link" target="_blank" rel="noopener" title="${platformLabels[link.platform]}">
+                    ${platformSVGs[link.platform]}
+                    ${platformLabels[link.platform]}
+                </a>`).join('\n');
+  
+  return `
+        <section class="section">
+            <h2>${epData.streamingSectionTitle || 'stream from a billionaire'}</h2>
+            <div class="stream-grid">
+${linksHTML}
+            </div>
+        </section>
+        `;
+}
+
+function generateHTML(epData, fontPairs, assets, useBase64 = false) {
+  const fonts = fontPairs[epData.fontPair] || fontPairs.serif;
+  const colors = epData.colors;
+  const year = new Date().getFullYear();
+
+  const artworkSrc = useBase64 && assets.artwork
+    ? assets.artwork
+    : epData.artwork
+    ? 'assets/cover' + getExtension(epData.artwork.name)
+    : '';
+
+  const tracksHTML = epData.tracks.map((track, index) => {
+    const audioSrc = useBase64 && assets.audio[track.id]
+      ? assets.audio[track.id]
+      : track.audioFile
+      ? `assets/${sanitizeFilename(track.name || `track-${index + 1}`)}${getExtension(track.audioFile.name)}`
+      : '';
+
+    const downloadLink = epData.allowDownload && audioSrc
+      ? `<a href="${audioSrc}" download class="download-link" aria-label="Download ${track.name || `Track ${index + 1}`}">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/></svg>
+                        ${getExtension(track.audioFile?.name || '.mp3')}
+                    </a>`
+      : '';
+
+    return `
+                <li class="track" data-src="${audioSrc}" data-index="${index}">
+                    <span class="track-number">${String(index + 1).padStart(2, '0')}</span>
+                    <button class="play-btn" aria-label="Play ${track.name || `Track ${index + 1}`}">
+                        <svg class="icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z"/>
+                        </svg>
+                        <svg class="icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+                            <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                        </svg>
+                    </button>
+                    <div class="track-info">
+                        <div class="track-title">${track.name || `Track ${index + 1}`}</div>
+                        <div class="track-duration">${track.duration || '—'}</div>
+                    </div>
+                    ${downloadLink}
+                </li>`;
+  }).join('\n');
+
+  const lyricsData = {};
+  epData.tracks.forEach((track, index) => {
+    if (track.parsedLyrics && track.parsedLyrics.length > 0) {
+      lyricsData[track.name || `Track ${index + 1}`] = track.parsedLyrics;
+    }
+  });
+
+  // Generate meta description
+  const metaDescription = epData.aboutText 
+    ? epData.aboutText.substring(0, 155) + (epData.aboutText.length > 155 ? '...' : '')
+    : epData.tagline 
+    ? epData.tagline
+    : `${epData.epTitle || 'New Release'} by ${epData.artistName || 'Artist'}${epData.tracks.length > 0 ? ` - ${epData.tracks.length} track${epData.tracks.length !== 1 ? 's' : ''}` : ''}`;
+
+  return `<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Standard SEO -->
+    <title>${epData.epTitle || 'Release'} - ${epData.artistName || 'Artist'}</title>
+    <meta name="description" content="${metaDescription}">
+    <meta name="author" content="${epData.artistName || 'Artist'}">
+    <meta name="keywords" content="${epData.artistName || 'Artist'}, ${epData.epTitle || 'Release'}, music, album, EP">
+    
+    <!-- Open Graph -->
+    <meta property="og:type" content="music.album">
+    <meta property="og:title" content="${epData.epTitle || 'Release'} - ${epData.artistName || 'Artist'}">
+    <meta property="og:description" content="${metaDescription}">
+    ${artworkSrc ? `<meta property="og:image" content="${artworkSrc}">` : ''}
+    ${artworkSrc ? `<meta property="og:image:alt" content="${epData.epTitle || 'Album'} artwork by ${epData.artistName || 'Artist'}">` : ''}
+    <meta property="og:site_name" content="${epData.artistName || 'Artist'}">
+    ${epData.tracks.length > 0 ? `<meta property="music:song_count" content="${epData.tracks.length}">` : ''}
+    ${epData.artistName ? `<meta property="music:musician" content="${epData.artistName}">` : ''}
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="${epData.epTitle || 'Release'} - ${epData.artistName || 'Artist'}">
+    <meta name="twitter:description" content="${metaDescription}">
+    ${artworkSrc ? `<meta name="twitter:image" content="${artworkSrc}">` : ''}
+    ${artworkSrc ? `<meta name="twitter:image:alt" content="${epData.epTitle || 'Album'} artwork">` : ''}
+    
+    <!-- Favicon -->
+    ${artworkSrc ? `<link rel="icon" type="image/png" href="${artworkSrc}">` : ''}
+    
+    <style>
+        :root {
+            --color-primary: ${colors.primary};
+            --color-secondary: ${colors.secondary};
+            --color-accent: ${colors.accent};
+            --color-paper: ${colors.paper};
+            --font-heading: ${fonts.heading};
+            --font-body: ${fonts.body};
+            --font-mono: ${fonts.mono};
+        }
+        
+        * { box-sizing: border-box; }
+        
+        body {
+            font-family: var(--font-body);
+            background-color: var(--color-primary);
+            color: var(--color-paper);
+            margin: 0;
+            padding: 20px;
+            line-height: 1.6;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 30px 0;
+        }
+        
+        .album-art-container {
+            position: relative;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        
+        .album-art {
+            width: 350px;
+            height: 350px;
+            border-radius: 4px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+            display: block;
+            object-fit: cover;
+        }
+        
+        .release-badge {
+            position: absolute;
+            top: -10px;
+            right: -10px;
+            background: var(--color-secondary);
+            color: var(--color-paper);
+            padding: 6px 12px;
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            font-style: italic;
+            letter-spacing: 1px;
+            border-radius: 3px;
+            transform: rotate(8deg);
+        }
+        
+        h1 {
+            font-family: var(--font-heading);
+            font-size: 3em;
+            margin: 10px 0;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+        }
+        
+        .subtitle {
+            font-family: var(--font-body);
+            font-size: 1.2em;
+            color: var(--color-secondary);
+        }
+        
+        .tagline {
+            font-family: var(--font-mono);
+            font-size: 0.85em;
+            color: var(--color-accent);
+            font-style: italic;
+            margin-top: 8px;
+        }
+        
+        .section {
+            margin: 20px 0;
+            padding: 20px;
+            background: rgba(79, 106, 137, 0.08);
+            border: 1px solid var(--color-secondary);
+            border-radius: 8px;
+        }
+        
+        .section h2 {
+            font-family: var(--font-body);
+            font-size: 1.5em;
+            color: var(--color-accent);
+            border-bottom: 1px solid rgba(216, 163, 74, 0.3);
+            padding-bottom: 8px;
+            margin: 0 0 15px 0;
+            text-transform: lowercase;
+        }
+        
+        .player-intro {
+            font-family: var(--font-mono);
+            font-size: 0.85em;
+            font-style: italic;
+            color: var(--color-secondary);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .tracklist {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .track {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            margin-bottom: 10px;
+            transition: background 0.2s ease;
+        }
+        
+        .track:hover { background: rgba(0, 0, 0, 0.3); }
+        
+        .track.playing {
+            background: rgba(79, 106, 137, 0.2);
+            border-left: 3px solid var(--color-secondary);
+        }
+        
+        .track-number {
+            font-family: var(--font-mono);
+            font-size: 0.9em;
+            font-style: italic;
+            color: var(--color-secondary);
+            min-width: 24px;
+        }
+        
+        .track-info { flex: 1; }
+        
+        .track-title {
+            font-family: var(--font-body);
+            font-size: 1.1em;
+            color: var(--color-paper);
+        }
+        
+        .track-duration {
+            font-family: var(--font-mono);
+            font-size: 0.75em;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+        
+        .play-btn {
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            background: var(--color-secondary);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .play-btn:hover {
+            background: var(--color-accent);
+            transform: scale(1.05);
+        }
+        
+        .play-btn svg {
+            width: 18px;
+            height: 18px;
+            fill: var(--color-paper);
+        }
+        
+        .download-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 10px;
+            background: var(--color-secondary);
+            color: var(--color-paper);
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            font-style: italic;
+            flex-shrink: 0;
+            transition: all 0.2s ease;
+        }
+        
+        .download-link:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+        
+        .download-link svg {
+            width: 12px;
+            height: 12px;
+            fill: currentColor;
+        }
+        
+        .now-playing {
+            background: var(--color-primary);
+            border: 1px solid var(--color-secondary);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 20px;
+            display: none;
+        }
+        
+        .now-playing.active { display: block; }
+        
+        .now-playing-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 10px;
+        }
+        
+        .now-playing-title {
+            font-family: var(--font-body);
+            font-size: 1em;
+            color: var(--color-accent);
+        }
+        
+        .now-playing-label {
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            font-style: italic;
+            color: var(--color-secondary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .progress-container {
+            width: 100%;
+            height: 6px;
+            background: rgba(79, 106, 137, 0.3);
+            border-radius: 3px;
+            cursor: pointer;
+            margin-bottom: 10px;
+        }
+        
+        .progress-bar {
+            height: 100%;
+            background: var(--color-secondary);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .time-display {
+            display: flex;
+            justify-content: space-between;
+            font-family: var(--font-mono);
+            font-size: 0.75em;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+        
+        .lyrics-player {
+            display: none;
+            padding: 12px 15px;
+            text-align: center;
+            border-top: 1px solid rgba(79, 106, 137, 0.2);
+            margin-top: 10px;
+        }
+        
+        .lyrics-player.active { display: block; }
+        
+        .lyric-line {
+            font-family: var(--font-body);
+            transition: all 0.3s ease-out;
+            line-height: 1.3;
+        }
+        
+        .lyric-line.prev, .lyric-line.next {
+            font-size: 0.8em;
+            color: var(--color-secondary);
+            opacity: 0.5;
+        }
+        
+        .lyric-line.current {
+            font-size: 1em;
+            color: var(--color-accent);
+            margin: 8px 0;
+        }
+        
+        .about-content {
+            font-family: var(--font-body);
+            font-size: 1em;
+            line-height: 1.8;
+        }
+        
+        .stream-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 12px;
+            margin-top: 15px;
+        }
+        
+        .stream-link {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 12px;
+            background: var(--color-secondary);
+            color: var(--color-paper);
+            text-decoration: none;
+            border-radius: 8px;
+            font-family: var(--font-body);
+            font-size: 0.9em;
+            transition: all 0.2s ease;
+            min-height: 90px;
+        }
+        
+        .stream-link:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(216, 163, 74, 0.3);
+        }
+        
+        .stream-link svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+            margin-bottom: 8px;
+        }
+        
+        .stream-label {
+            font-size: 0.75em;
+            opacity: 0.8;
+            margin-top: 4px;
+        }
+        
+        /* Sticky Bottom Player */
+        .sticky-player {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: var(--color-primary);
+            border-top: 1px solid var(--color-secondary);
+            padding: 0;
+            z-index: 1000;
+            transform: translateY(100%);
+            transition: transform 0.3s ease;
+            box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.4);
+        }
+        
+        .sticky-player.active {
+            transform: translateY(0);
+        }
+        
+        .sticky-player-inner {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 12px 20px;
+        }
+        
+        .sticky-player-controls {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+        
+        .sticky-play-btn {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--color-secondary);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+        }
+        
+        .sticky-play-btn:hover {
+            background: var(--color-accent);
+        }
+        
+        .sticky-play-btn svg {
+            width: 16px;
+            height: 16px;
+            fill: var(--color-paper);
+        }
+        
+        .sticky-play-btn:hover svg {
+            fill: var(--color-primary);
+        }
+        
+        .sticky-track-info {
+            flex: 1;
+            min-width: 0;
+        }
+        
+        .sticky-track-title {
+            font-family: var(--font-body);
+            font-size: 0.95em;
+            color: var(--color-paper);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        
+        .sticky-track-artist {
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            font-style: italic;
+            color: var(--color-secondary);
+        }
+        
+        .sticky-progress-container {
+            flex: 2;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .sticky-progress-bar-wrapper {
+            flex: 1;
+            height: 6px;
+            background: rgba(79, 106, 137, 0.3);
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        
+        .sticky-progress-bar {
+            height: 100%;
+            background: var(--color-secondary);
+            border-radius: 3px;
+            width: 0%;
+            transition: width 0.1s linear;
+        }
+        
+        .sticky-time {
+            font-family: var(--font-mono);
+            font-size: 0.7em;
+            font-style: italic;
+            color: var(--color-secondary);
+            min-width: 35px;
+        }
+        
+        .sticky-close-btn {
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: transparent;
+            border: 1px solid var(--color-secondary);
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+            flex-shrink: 0;
+            opacity: 0.6;
+        }
+        
+        .sticky-close-btn:hover {
+            background: var(--color-secondary);
+            border-color: var(--color-secondary);
+            opacity: 1;
+        }
+        
+        .sticky-close-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--color-paper);
+        }
+        
+        .sticky-lyrics {
+            text-align: center;
+            padding: 10px 0 0 0;
+            border-top: 1px solid rgba(79, 106, 137, 0.2);
+            margin-top: 10px;
+            display: none;
+        }
+        
+        .sticky-lyrics.active {
+            display: block;
+        }
+        
+        .sticky-lyrics-scroll {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 3px;
+        }
+        
+        .sticky-lyric-line {
+            font-family: var(--font-body);
+            transition: all 0.3s ease-out;
+            line-height: 1.3;
+        }
+        
+        .sticky-lyric-line.prev {
+            font-size: 0.75em;
+            color: var(--color-secondary);
+            opacity: 0.4;
+        }
+        
+        .sticky-lyric-line.current {
+            font-size: 0.9em;
+            color: var(--color-accent);
+        }
+        
+        .sticky-lyric-line.next {
+            font-size: 0.75em;
+            color: var(--color-secondary);
+            opacity: 0.4;
+        }
+        
+        body.player-active {
+            padding-bottom: 120px;
+        }
+        
+        .download-section {
+            background: linear-gradient(135deg, rgba(216, 163, 74, 0.1) 0%, rgba(155, 74, 52, 0.08) 100%);
+            border: 1px solid var(--color-accent);
+        }
+        
+        .download-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+        
+        .download-track {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 12px 15px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 6px;
+            gap: 10px;
+        }
+        
+        .download-track-title {
+            font-family: var(--font-body);
+            font-size: 0.95em;
+        }
+        
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 8px 12px;
+            background: var(--color-secondary);
+            color: var(--color-paper);
+            text-decoration: none;
+            border-radius: 4px;
+            font-family: var(--font-mono);
+            font-size: 0.75em;
+            font-style: italic;
+            transition: all 0.2s ease;
+        }
+        
+        .download-btn:hover {
+            background: var(--color-accent);
+            color: var(--color-primary);
+        }
+        
+        .download-btn svg {
+            width: 14px;
+            height: 14px;
+            fill: currentColor;
+        }
+        
+        footer {
+            font-family: var(--font-mono);
+            font-size: 0.85em;
+            font-style: italic;
+            text-align: center;
+            margin-top: 40px;
+            padding: 20px 0;
+            border-top: 1px solid var(--color-secondary);
+            color: var(--color-accent);
+        }
+        
+        @media (max-width: 768px) {
+            body { padding: 15px; }
+            h1 { font-size: 2em; }
+            .album-art { width: 280px; height: 280px; }
+            .track { padding: 12px; gap: 10px; }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="album-art-container">
+            ${epData.tracks.length > 0 ? `<span class="release-badge">${epData.tracks.length} track${epData.tracks.length !== 1 ? 's' : ''}</span>` : ''}
+            ${artworkSrc ? `<img src="${artworkSrc}" alt="${epData.epTitle} Album Cover" class="album-art">` : ''}
+        </div>
+        <h1>${epData.epTitle || 'Your Release Title'}</h1>
+        <p class="subtitle">${epData.artistName || 'Artist Name'}</p>
+        ${epData.tagline ? `<p class="tagline">${epData.tagline}</p>` : ''}
+    </header>
+
+    <main>
+        ${epData.tracks.length > 0 ? `
+        <section class="section player-section">
+            <h2>listen here</h2>
+            <p class="player-intro">Directly from the source</p>
+            
+            <ul class="tracklist">
+${tracksHTML}
+            </ul>
+            
+            <div class="now-playing" id="nowPlaying">
+                <div class="now-playing-header">
+                    <span class="now-playing-label">now playing</span>
+                    <span class="now-playing-title" id="nowPlayingTitle">—</span>
+                </div>
+                <div class="progress-container" id="progressContainer">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                <div class="time-display">
+                    <span id="currentTime">0:00</span>
+                    <span id="totalTime">0:00</span>
+                </div>
+                <div class="lyrics-player" id="lyricsPlayer">
+                    <div class="lyric-line prev" id="lyricPrev"></div>
+                    <div class="lyric-line current" id="lyricCurrent"></div>
+                    <div class="lyric-line next" id="lyricNext"></div>
+                </div>
+            </div>
+        </section>
+        ` : ''}
+
+
+        ${epData.aboutText ? `
+        <section class="section">
+            <h2>about the release</h2>
+            <div class="about-content">
+                <p>${epData.aboutText}</p>
+            </div>
+        </section>
+        ` : ''}
+
+        ${epData.bandcampLink ? `
+        <section class="section">
+            <h2>stream from bandcamp</h2>
+            <div class="stream-grid">
+                <a href="${epData.bandcampLink}" class="stream-link" target="_blank" rel="noopener" title="Bandcamp">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                    </svg>
+                    Bandcamp
+                    <span class="stream-label">+ download</span>
+                </a>
+            </div>
+        </section>
+        ` : ''}
+
+        ${generateStreamingLinksHTML(epData)}
+    </main>
+
+    <footer>
+        <p>&copy; ${year} ${epData.artistName || 'Artist Name'}</p>
+    </footer>
+
+    <!-- Sticky Bottom Player -->
+    <div class="sticky-player" id="stickyPlayer">
+        <div class="sticky-player-inner">
+            <div class="sticky-player-controls">
+                <button class="sticky-play-btn" id="stickyPlayBtn" aria-label="Play/Pause">
+                    <svg class="sticky-icon-play" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                    </svg>
+                    <svg class="sticky-icon-pause" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style="display: none;">
+                        <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/>
+                    </svg>
+                </button>
+                <div class="sticky-track-info">
+                    <div class="sticky-track-title" id="stickyTrackTitle">—</div>
+                    <div class="sticky-track-artist">${epData.artistName || 'Artist'}</div>
+                </div>
+                <div class="sticky-progress-container">
+                    <span class="sticky-time" id="stickyCurrentTime">0:00</span>
+                    <div class="sticky-progress-bar-wrapper" id="stickyProgressWrapper">
+                        <div class="sticky-progress-bar" id="stickyProgressBar"></div>
+                    </div>
+                    <span class="sticky-time" id="stickyTotalTime">0:00</span>
+                </div>
+                <button class="sticky-close-btn" id="stickyCloseBtn" aria-label="Close player">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
+                        <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                    </svg>
+                </button>
+            </div>
+            <div class="sticky-lyrics" id="stickyLyrics">
+                <div class="sticky-lyrics-scroll">
+                    <div class="sticky-lyric-line prev" id="stickyLyricPrev"></div>
+                    <div class="sticky-lyric-line current" id="stickyLyricCurrent"></div>
+                    <div class="sticky-lyric-line next" id="stickyLyricNext"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const audio = new Audio();
+        let currentTrack = null;
+        const artistName = "${epData.artistName || 'Artist'}";
+        const releaseTitle = "${epData.epTitle || 'Release'}";
+        const albumArtSrc = "${artworkSrc || ''}";
+        
+        const allLyrics = ${JSON.stringify(lyricsData, null, 2)};
+        
+        let currentLyricIndex = -1;
+        let currentLyrics = null;
+        let currentSongTitle = null;
+        
+        const nowPlaying = document.getElementById('nowPlaying');
+        const nowPlayingTitle = document.getElementById('nowPlayingTitle');
+        const progressBar = document.getElementById('progressBar');
+        const progressContainer = document.getElementById('progressContainer');
+        const currentTimeEl = document.getElementById('currentTime');
+        const totalTimeEl = document.getElementById('totalTime');
+        const lyricsPlayer = document.getElementById('lyricsPlayer');
+        const lyricPrev = document.getElementById('lyricPrev');
+        const lyricCurrent = document.getElementById('lyricCurrent');
+        const lyricNext = document.getElementById('lyricNext');
+        
+        // Sticky player elements
+        const stickyPlayer = document.getElementById('stickyPlayer');
+        const stickyPlayBtn = document.getElementById('stickyPlayBtn');
+        const stickyTrackTitle = document.getElementById('stickyTrackTitle');
+        const stickyProgressBar = document.getElementById('stickyProgressBar');
+        const stickyProgressWrapper = document.getElementById('stickyProgressWrapper');
+        const stickyCurrentTime = document.getElementById('stickyCurrentTime');
+        const stickyTotalTime = document.getElementById('stickyTotalTime');
+        const stickyCloseBtn = document.getElementById('stickyCloseBtn');
+        const stickyLyrics = document.getElementById('stickyLyrics');
+        const stickyLyricPrev = document.getElementById('stickyLyricPrev');
+        const stickyLyricCurrent = document.getElementById('stickyLyricCurrent');
+        const stickyLyricNext = document.getElementById('stickyLyricNext');
+        const stickyIconPlay = document.querySelector('.sticky-icon-play');
+        const stickyIconPause = document.querySelector('.sticky-icon-pause');
+        
+        function formatTime(seconds) {
+            const mins = Math.floor(seconds / 60);
+            const secs = Math.floor(seconds % 60);
+            return mins + ':' + secs.toString().padStart(2, '0');
+        }
+        
+        function getCurrentLyricIndex(time) {
+            if (!currentLyrics) return -1;
+            for (let i = currentLyrics.length - 1; i >= 0; i--) {
+                if (time >= currentLyrics[i].time) return i;
+            }
+            return -1;
+        }
+        
+        function updateLyrics(time) {
+            if (!currentLyrics) return;
+            const newIndex = getCurrentLyricIndex(time);
+            if (newIndex !== currentLyricIndex) {
+                currentLyricIndex = newIndex;
+                lyricPrev.textContent = currentLyricIndex > 0 ? currentLyrics[currentLyricIndex - 1].text : '';
+                lyricCurrent.textContent = currentLyricIndex >= 0 ? currentLyrics[currentLyricIndex].text : currentSongTitle + ' — Lyrics';
+                lyricNext.textContent = (currentLyricIndex >= 0 && currentLyricIndex < currentLyrics.length - 1) ? currentLyrics[currentLyricIndex + 1].text : '';
+                
+                // Update sticky lyrics
+                if (stickyLyrics.classList.contains('active')) {
+                    stickyLyricPrev.textContent = currentLyricIndex > 0 ? currentLyrics[currentLyricIndex - 1].text : '';
+                    stickyLyricCurrent.textContent = currentLyricIndex >= 0 ? currentLyrics[currentLyricIndex].text : '';
+                    stickyLyricNext.textContent = (currentLyricIndex >= 0 && currentLyricIndex < currentLyrics.length - 1) ? currentLyrics[currentLyricIndex + 1].text : '';
+                }
+            }
+        }
+        
+        function updateProgress() {
+            if (audio.duration) {
+                progressBar.style.width = (audio.currentTime / audio.duration) * 100 + '%';
+                currentTimeEl.textContent = formatTime(audio.currentTime);
+                totalTimeEl.textContent = formatTime(audio.duration);
+                
+                // Update sticky player progress
+                stickyProgressBar.style.width = (audio.currentTime / audio.duration) * 100 + '%';
+                stickyCurrentTime.textContent = formatTime(audio.currentTime);
+                stickyTotalTime.textContent = formatTime(audio.duration);
+                
+                if (currentLyrics) updateLyrics(audio.currentTime);
+            }
+        }
+        
+        function showStickyPlayer(title) {
+            stickyPlayer.classList.add('active');
+            document.body.classList.add('player-active');
+            stickyTrackTitle.textContent = title;
+            stickyIconPlay.style.display = 'none';
+            stickyIconPause.style.display = 'block';
+            
+            if (currentLyrics) {
+                stickyLyrics.classList.add('active');
+            } else {
+                stickyLyrics.classList.remove('active');
+            }
+        }
+        
+        function hideStickyPlayer() {
+            stickyPlayer.classList.remove('active');
+            document.body.classList.remove('player-active');
+            stickyLyrics.classList.remove('active');
+        }
+        
+        function updateStickyPlayPauseIcon() {
+            if (audio.paused) {
+                stickyIconPlay.style.display = 'block';
+                stickyIconPause.style.display = 'none';
+            } else {
+                stickyIconPlay.style.display = 'none';
+                stickyIconPause.style.display = 'block';
+            }
+        }
+        
+        function playTrack(trackEl) {
+            const src = trackEl.dataset.src;
+            const title = trackEl.querySelector('.track-title').textContent;
+            
+            document.querySelectorAll('.track').forEach(t => {
+                t.classList.remove('playing');
+                t.querySelector('.icon-play').style.display = 'block';
+                t.querySelector('.icon-pause').style.display = 'none';
+            });
+            
+            if (currentTrack === trackEl && !audio.paused) {
+                audio.pause();
+                trackEl.querySelector('.icon-play').style.display = 'block';
+                trackEl.querySelector('.icon-pause').style.display = 'none';
+                return;
+            }
+            
+            if (currentTrack !== trackEl) {
+                audio.src = src;
+                currentTrack = trackEl;
+                currentLyricIndex = -1;
+                currentSongTitle = title;
+                
+                if (allLyrics[title]) {
+                    currentLyrics = allLyrics[title];
+                    lyricsPlayer.classList.add('active');
+                    currentLyricIndex = -2;
+                    updateLyrics(0);
+                } else {
+                    currentLyrics = null;
+                    lyricsPlayer.classList.remove('active');
+                }
+            }
+            
+            audio.play();
+            trackEl.classList.add('playing');
+            trackEl.querySelector('.icon-play').style.display = 'none';
+            trackEl.querySelector('.icon-pause').style.display = 'block';
+            nowPlaying.classList.add('active');
+            nowPlayingTitle.textContent = title;
+            
+            // Update Media Session API for lock screen and Bluetooth displays
+            if ('mediaSession' in navigator && albumArtSrc) {
+                navigator.mediaSession.metadata = new MediaMetadata({
+                    title: title,
+                    artist: artistName,
+                    album: releaseTitle,
+                    artwork: [
+                        { src: albumArtSrc, sizes: '512x512', type: 'image/png' },
+                        { src: albumArtSrc, sizes: '256x256', type: 'image/png' },
+                        { src: albumArtSrc, sizes: '128x128', type: 'image/png' }
+                    ]
+                });
+            }
+            
+            // Show sticky player
+            showStickyPlayer(title);
+        }
+        
+        document.querySelectorAll('.track .play-btn').forEach(btn => {
+            btn.addEventListener('click', () => playTrack(btn.closest('.track')));
+        });
+        
+        if (progressContainer) {
+            progressContainer.addEventListener('click', (e) => {
+                if (audio.duration) {
+                    const rect = progressContainer.getBoundingClientRect();
+                    audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+                }
+            });
+        }
+        
+        // Sticky player controls
+        stickyPlayBtn.addEventListener('click', () => {
+            if (currentTrack) {
+                if (audio.paused) {
+                    audio.play();
+                    currentTrack.querySelector('.icon-play').style.display = 'none';
+                    currentTrack.querySelector('.icon-pause').style.display = 'block';
+                } else {
+                    audio.pause();
+                    currentTrack.querySelector('.icon-play').style.display = 'block';
+                    currentTrack.querySelector('.icon-pause').style.display = 'none';
+                }
+                updateStickyPlayPauseIcon();
+            }
+        });
+        
+        stickyProgressWrapper.addEventListener('click', (e) => {
+            if (audio.duration) {
+                const rect = stickyProgressWrapper.getBoundingClientRect();
+                audio.currentTime = ((e.clientX - rect.left) / rect.width) * audio.duration;
+            }
+        });
+        
+        stickyCloseBtn.addEventListener('click', () => {
+            audio.pause();
+            audio.currentTime = 0;
+            if (currentTrack) {
+                currentTrack.classList.remove('playing');
+                currentTrack.querySelector('.icon-play').style.display = 'block';
+                currentTrack.querySelector('.icon-pause').style.display = 'none';
+            }
+            nowPlaying.classList.remove('active');
+            lyricsPlayer.classList.remove('active');
+            hideStickyPlayer();
+            currentTrack = null;
+            currentLyrics = null;
+        });
+        
+        audio.addEventListener('timeupdate', updateProgress);
+        
+        audio.addEventListener('play', updateStickyPlayPauseIcon);
+        audio.addEventListener('pause', updateStickyPlayPauseIcon);
+        
+        audio.addEventListener('ended', () => {
+            const tracks = Array.from(document.querySelectorAll('.track'));
+            const currentIndex = tracks.indexOf(currentTrack);
+            if (currentIndex < tracks.length - 1) {
+                playTrack(tracks[currentIndex + 1]);
+            } else {
+                currentTrack.classList.remove('playing');
+                currentTrack.querySelector('.icon-play').style.display = 'block';
+                currentTrack.querySelector('.icon-pause').style.display = 'none';
+                nowPlaying.classList.remove('active');
+                lyricsPlayer.classList.remove('active');
+                hideStickyPlayer();
+                currentTrack = null;
+                currentLyrics = null;
+            }
+        });
+    </script>
+</body>
+</html>`;
+}
+
+function getExtension(filename) {
+  if (!filename) return '.mp3';
+  const ext = filename.substring(filename.lastIndexOf('.'));
+  return ext || '.mp3';
+}
+
+function sanitizeFilename(name) {
+  return name.toLowerCase().replace(/[^a-z0-9]/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
+
+function generateReadme(epData) {
+  return `# ${epData.epTitle || 'Release'} - ${epData.artistName || 'Artist'}
+
+This is your Music landing page, generated with Pressed.
+
+## Deploying to Netlify
+
+1. Go to [netlify.com](https://netlify.com) and sign up/log in
+2. Drag and drop this entire folder onto the Netlify dashboard
+3. Your site is live!
+
+## Deploying to GitHub Pages
+
+1. Create a new repository on GitHub
+2. Upload all files from this folder
+3. Go to Settings > Pages > Select "main" branch
+4. Your site will be available at \`https://[username].github.io/[repo-name]\`
+
+## Deploying to Vercel
+
+1. Go to [vercel.com](https://vercel.com) and sign up/log in
+2. Click "Add New Project"
+3. Upload this folder or connect your GitHub repo
+4. Your site is live!
+
+---
+Generated with Pressed - Privacy First Music landing page Generator
+`;
+}
+
+export default function ExportButton() {
+  const { epData, fontPairs } = useEP();
+  const [isExporting, setIsExporting] = useState(false);
+  const [showSuccessModal, setShowSuccessModal] = useState(false);
+
+  const handleExport = async () => {
+    setIsExporting(true);
+
+    try {
+      const zip = new JSZip();
+      const assets = { artwork: null, audio: {} };
+
+      const html = generateHTML(epData, fontPairs, assets, false);
+      zip.file('index.html', html);
+      zip.file('README.md', generateReadme(epData));
+
+      const assetsFolder = zip.folder('assets');
+
+      if (epData.artwork) {
+        const artworkBuffer = await epData.artwork.arrayBuffer();
+        assetsFolder.file('cover' + getExtension(epData.artwork.name), artworkBuffer);
+      }
+
+      for (const track of epData.tracks) {
+        if (track.audioFile) {
+          const audioBuffer = await track.audioFile.arrayBuffer();
+          const filename = sanitizeFilename(track.name || `track-${epData.tracks.indexOf(track) + 1}`) + getExtension(track.audioFile.name);
+          assetsFolder.file(filename, audioBuffer);
+        }
+      }
+
+      const zipBlob = await zip.generateAsync({ type: 'blob' });
+      const url = URL.createObjectURL(zipBlob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = `${sanitizeFilename(epData.epTitle || 'release')}-landing-page.zip`;
+      a.click();
+      URL.revokeObjectURL(url);
+
+      // Show success modal
+      setShowSuccessModal(true);
+    } catch (error) {
+      console.error('Export failed:', error);
+      alert('Export failed. Please try again.');
+    } finally {
+      setIsExporting(false);
+    }
+  };
+
+  const isReady = epData.artistName && epData.epTitle && epData.tracks.length > 0;
+
+  return (
+    <>
+      <button
+        onClick={handleExport}
+        disabled={!isReady || isExporting}
+        className={`flex items-center gap-2 px-4 py-2 rounded font-medium transition-colors ${
+          isReady && !isExporting
+            ? 'bg-amber-600 hover:bg-amber-500 text-white'
+            : 'bg-zinc-700 text-zinc-400 cursor-not-allowed'
+        }`}
+      >
+        {isExporting ? (
+          <>
+            <Loader2 className="w-4 h-4 animate-spin" />
+            Exporting...
+          </>
+        ) : (
+          <>
+            <Download className="w-4 h-4" />
+            Download ZIP
+          </>
+        )}
+      </button>
+
+      {/* Success Modal */}
+      {showSuccessModal && (
+        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4">
+          <div className="bg-zinc-900 rounded-lg shadow-2xl max-w-md w-full border border-zinc-800">
+            <div className="p-6">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="w-10 h-10 rounded-full bg-green-500/20 flex items-center justify-center">
+                  <svg className="w-6 h-6 text-green-500" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-white">Export Successful</h3>
+              </div>
+              
+              <p className="text-zinc-400 mb-6">
+                Your landing page has been downloaded. Deploy it in under 30 seconds:
+              </p>
+
+              <div className="space-y-3 mb-6">
+                <a
+                  href="https://app.netlify.com/drop"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-zinc-800 hover:bg-zinc-750 rounded-lg border border-zinc-700 hover:border-amber-500 transition-all group"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-medium text-white mb-1">Netlify Drop</div>
+                      <div className="text-sm text-zinc-400">Drag & drop your ZIP file</div>
+                    </div>
+                    <svg className="w-5 h-5 text-zinc-500 group-hover:text-amber-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </a>
+
+                <a
+                  href="https://vercel.com/new"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-4 bg-zinc-800 hover:bg-zinc-750 rounded-lg border border-zinc-700 hover:border-amber-500 transition-all group"
+                >
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-medium text-white mb-1">Vercel</div>
+                      <div className="text-sm text-zinc-400">Upload or connect to GitHub</div>
+                    </div>
+                    <svg className="w-5 h-5 text-zinc-500 group-hover:text-amber-500 transition-colors" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </a>
+              </div>
+
+              <p className="text-xs text-zinc-500 mb-4">
+                Both platforms offer free hosting with custom domains
+              </p>
+
+              <button
+                onClick={() => setShowSuccessModal(false)}
+                className="w-full px-4 py-2 bg-zinc-800 hover:bg-zinc-700 text-white rounded transition-colors"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}
+</file>
+
+<file path="src/components/Preview.jsx">
+import { useState, useRef, useEffect } from 'react';
+import { useEP } from '../context/EPContext';
+import { Play, Pause, Monitor, Smartphone } from 'lucide-react';
+
+function formatTime(seconds) {
+  if (!seconds || isNaN(seconds)) return '0:00';
+  const mins = Math.floor(seconds / 60);
+  const secs = Math.floor(seconds % 60);
+  return `${mins}:${secs.toString().padStart(2, '0')}`;
+}
+
+function getCurrentLyricIndex(lyrics, time) {
+  if (!lyrics || lyrics.length === 0) return -1;
+  for (let i = lyrics.length - 1; i >= 0; i--) {
+    if (time >= lyrics[i].time) {
+      return i;
+    }
+  }
+  return -1;
+}
+
+const platformIcons = {
+  spotify: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M248 8C111.1 8 0 119.1 0 256s111.1 248 248 248 248-111.1 248-248S384.9 8 248 8zm100.7 364.9c-4.2 0-6.8-1.3-10.7-3.6-62.4-37.6-135-39.2-206.7-24.5-3.9 1-9 2.6-11.9 2.6-9.7 0-15.8-7.7-15.8-15.8 0-10.3 6.1-15.2 13.6-16.8 81.9-18.1 165.6-16.5 237 30.6 6.1 3.9 9.7 7.4 9.7 16.5s-7.1 15.4-15.2 15.4zm26.9-65.6c-5.2 0-8.7-2.3-12.3-4.2-62.5-37-155.7-51.9-238.6-29.4-4.8 1.3-7.4 2.6-11.9 2.6-10.7 0-19.4-8.7-19.4-19.4s5.2-17.8 15.5-20.7c27.8-7.8 56.2-13.6 97.8-13.6 64.9 0 127.6 16.1 177 45.5 8.1 4.8 11.3 11 11.3 19.7-.1 10.8-8.5 19.5-19.4 19.5zm31-76.2c-5.2 0-8.4-1.3-12.9-3.9-71.2-42.5-198.5-52.7-280.9-29.7-3.6 1-8.1 2.6-12.9 2.6-13.2 0-23.3-10.3-23.3-23.6 0-13.6 8.4-21.3 17.4-23.9 35.2-10.3 74.6-15.2 117.5-15.2 73 0 149.5 15.2 205.4 47.8 7.8 4.5 12.9 10.7 12.9 22.6 0 13.6-11 23.3-23.2 23.3z"/></svg>,
+  appleMusic: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"/></svg>,
+  youtubeMusic: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"/></svg>,
+  tidal: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M3 9l3-3 3 3-3 3-3-3zm6 0l3-3 3 3-3 3-3-3zm6 0l3-3 3 3-3 3-3-3zm-6 6l3-3 3 3-3 3-3-3z"/></svg>,
+  amazonMusic: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M257.2 162.7c-48.7 1.8-169.5 15.5-169.5 117.5 0 109.5 138.3 114 183.5 43.2 6.5 10.2 35.4 37.5 45.3 46.8l56.8-56S341 288.9 341 261.4V114.3C341 89 316.5 32 228.7 32 140.7 32 94 87 94 136.3l73.5 6.8c16.3-49.5 54.2-49.5 54.2-49.5 40.7-.1 35.5 29.8 35.5 69.1zm0 86.8c0 80-84.2 68-84.2 17.2 0-47.2 50.5-56.7 84.2-57.8v40.6zm136 163.5c-7.7 10-70 67-174.5 67S34.2 408.5 9.7 379c-6.8-7.7 1-11.3 5.5-8.3C88.5 415.2 203 488.5 387.7 401c7.5-3.7 13.3 2 5.5 12zm39.8 2.2c-6.5 15.8-16 26.8-21.2 31-5.5 4.5-9.5 2.7-6.5-3.8s19.3-46.5 12.7-55c-6.5-8.3-37-4.3-48-3.2-10.8 1-13 2-14-.3-2.3-5.7 21.7-15.5 37.5-17.5 15.7-1.8 41-.8 46 5.7 3.7 5.1 0 27.1-6.5 43.1z"/></svg>,
+  behindTheScenes: <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>,
+};
+
+const platformLabels = {
+  spotify: 'Spotify',
+  appleMusic: 'Apple Music',
+  youtubeMusic: 'YouTube Music',
+  tidal: 'Tidal',
+  amazonMusic: 'Amazon Music',
+  behindTheScenes: 'Behind the Scenes',
+};
+
+function StreamingButton({ link }) {
+  return (
+    <a
+      href={link.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      style={{
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+        justifyContent: 'center',
+        padding: '18px 12px',
+        background: 'var(--color-secondary)',
+        color: 'var(--color-paper)',
+        textDecoration: 'none',
+        borderRadius: '8px',
+        fontFamily: 'var(--font-body)',
+        fontSize: '0.9em',
+        minHeight: '90px',
+        transition: 'all 0.2s ease',
+      }}
+    >
+      {platformIcons[link.platform]}
+      {platformLabels[link.platform]}
+    </a>
+  );
+}
+
+export default function Preview() {
+  const { epData, fontPairs } = useEP();
+  const [viewMode, setViewMode] = useState('desktop');
+  const [currentTrackIndex, setCurrentTrackIndex] = useState(null);
+  const [isPlaying, setIsPlaying] = useState(false);
+  const [currentTime, setCurrentTime] = useState(0);
+  const [duration, setDuration] = useState(0);
+  const [currentLyricIndex, setCurrentLyricIndex] = useState(-1);
+  const audioRef = useRef(null);
+
+  const fonts = fontPairs[epData.fontPair] || fontPairs.serif;
+  const colors = epData.colors;
+
+  const currentTrack = currentTrackIndex !== null ? epData.tracks[currentTrackIndex] : null;
+
+  useEffect(() => {
+    const audio = audioRef.current;
+    if (!audio) return;
+
+    const handleTimeUpdate = () => {
+      setCurrentTime(audio.currentTime);
+      if (currentTrack?.parsedLyrics) {
+        const idx = getCurrentLyricIndex(currentTrack.parsedLyrics, audio.currentTime);
+        setCurrentLyricIndex(idx);
+      }
+    };
+
+    const handleLoadedMetadata = () => {
+      setDuration(audio.duration);
+    };
+
+    const handleEnded = () => {
+      if (currentTrackIndex !== null && currentTrackIndex < epData.tracks.length - 1) {
+        playTrack(currentTrackIndex + 1);
+      } else {
+        setIsPlaying(false);
+        setCurrentTrackIndex(null);
+      }
+    };
+
+    audio.addEventListener('timeupdate', handleTimeUpdate);
+    audio.addEventListener('loadedmetadata', handleLoadedMetadata);
+    audio.addEventListener('ended', handleEnded);
+
+    return () => {
+      audio.removeEventListener('timeupdate', handleTimeUpdate);
+      audio.removeEventListener('loadedmetadata', handleLoadedMetadata);
+      audio.removeEventListener('ended', handleEnded);
+    };
+  }, [currentTrackIndex, currentTrack, epData.tracks.length]);
+
+  const playTrack = (index) => {
+    const track = epData.tracks[index];
+    if (!track?.audioPreview) return;
+
+    if (currentTrackIndex === index && isPlaying) {
+      audioRef.current?.pause();
+      setIsPlaying(false);
+      return;
+    }
+
+    if (currentTrackIndex !== index) {
+      setCurrentTrackIndex(index);
+      setCurrentLyricIndex(-1);
+      if (audioRef.current) {
+        audioRef.current.src = track.audioPreview;
+        audioRef.current.load();
+      }
+    }
+
+    setTimeout(() => {
+      audioRef.current?.play();
+      setIsPlaying(true);
+    }, 50);
+  };
+
+  const handleProgressClick = (e) => {
+    if (!audioRef.current || !duration) return;
+    const rect = e.currentTarget.getBoundingClientRect();
+    const percent = (e.clientX - rect.left) / rect.width;
+    audioRef.current.currentTime = percent * duration;
+  };
+
+  const togglePlayPause = () => {
+    if (!audioRef.current) return;
+    if (isPlaying) {
+      audioRef.current.pause();
+      setIsPlaying(false);
+    } else {
+      audioRef.current.play();
+      setIsPlaying(true);
+    }
+  };
+
+  const closeStickyPlayer = () => {
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    setIsPlaying(false);
+    setCurrentTrackIndex(null);
+    setCurrentLyricIndex(-1);
+  };
+
+  const previewStyle = {
+    '--color-primary': colors.primary,
+    '--color-secondary': colors.secondary,
+    '--color-accent': colors.accent,
+    '--color-paper': colors.paper,
+    '--font-heading': fonts.heading,
+    '--font-body': fonts.body,
+    '--font-mono': fonts.mono,
+  };
+
+  return (
+    <div className="flex-1 bg-zinc-950 flex flex-col h-screen overflow-hidden">
+      {/* Toolbar */}
+      <div className="flex items-center justify-between px-4 py-2 bg-zinc-900 border-b border-zinc-800">
+        <div className="flex items-center gap-2">
+          <button
+            onClick={() => setViewMode('desktop')}
+            className={`p-2 rounded transition-colors ${
+              viewMode === 'desktop'
+                ? 'bg-zinc-700 text-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <Monitor className="w-4 h-4" />
+          </button>
+          <button
+            onClick={() => setViewMode('mobile')}
+            className={`p-2 rounded transition-colors ${
+              viewMode === 'mobile'
+                ? 'bg-zinc-700 text-white'
+                : 'text-zinc-400 hover:text-white'
+            }`}
+          >
+            <Smartphone className="w-4 h-4" />
+          </button>
+        </div>
+        <span className="text-zinc-500 text-sm">Live Preview</span>
+      </div>
+
+      {/* Preview Frame */}
+      <div className="flex-1 overflow-auto p-6 flex justify-center">
+        <div
+          className={`shadow-2xl transition-all duration-300 overflow-auto ${
+            viewMode === 'mobile' ? 'w-[375px]' : 'w-full max-w-[900px]'
+          }`}
+          style={{
+            minHeight: viewMode === 'mobile' ? '667px' : 'auto',
+            maxHeight: '100%',
+            backgroundColor: colors.primary,
+          }}
+        >
+          {/* Generated Page Preview */}
+          <div
+            style={{
+              ...previewStyle,
+              backgroundColor: 'var(--color-primary)',
+              color: 'var(--color-paper)',
+              fontFamily: 'var(--font-body)',
+              padding: '20px',
+              minHeight: '100%',
+            }}
+          >
+            {/* Header */}
+            <header style={{ textAlign: 'center', marginBottom: '30px', padding: '30px 0' }}>
+              {/* Album Art */}
+              <div style={{ position: 'relative', display: 'inline-block', marginBottom: '20px' }}>
+                {epData.tracks.length > 0 && (
+                  <span
+                    style={{
+                      position: 'absolute',
+                      top: '-10px',
+                      right: '-10px',
+                      background: 'var(--color-secondary)',
+                      color: 'var(--color-paper)',
+                      padding: '6px 12px',
+                      fontFamily: 'var(--font-mono)',
+                      fontSize: '0.7em',
+                      fontStyle: 'italic',
+                      letterSpacing: '1px',
+                      borderRadius: '3px',
+                      transform: 'rotate(8deg)',
+                      zIndex: 10,
+                    }}
+                  >
+                    {epData.tracks.length} track{epData.tracks.length !== 1 ? 's' : ''}
+                  </span>
+                )}
+                <div
+                  style={{
+                    width: viewMode === 'mobile' ? '240px' : '350px',
+                    height: viewMode === 'mobile' ? '240px' : '350px',
+                    borderRadius: '4px',
+                    background: epData.artworkPreview
+                      ? `url(${epData.artworkPreview}) center/cover`
+                      : 'var(--color-secondary)',
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    boxShadow: '0 8px 24px rgba(0, 0, 0, 0.5)',
+                  }}
+                >
+                  {!epData.artworkPreview && (
+                    <span
+                      style={{
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '0.8em',
+                        opacity: 0.5,
+                      }}
+                    >
+                      Your Art Here
+                    </span>
+                  )}
+                </div>
+              </div>
+
+              {/* Title */}
+              <h1
+                style={{
+                  fontFamily: 'var(--font-heading)',
+                  fontSize: viewMode === 'mobile' ? '2em' : '3em',
+                  margin: '10px 0',
+                  letterSpacing: '2px',
+                  textTransform: 'uppercase',
+                }}
+              >
+                {epData.epTitle || 'Your Release Title'}
+              </h1>
+              <p
+                style={{
+                  fontFamily: 'var(--font-body)',
+                  fontSize: '1.2em',
+                  color: 'var(--color-secondary)',
+                }}
+              >
+                {epData.artistName || 'Artist Name'}
+              </p>
+              {epData.tagline && (
+                <p
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.85em',
+                    color: 'var(--color-accent)',
+                    fontStyle: 'italic',
+                    marginTop: '8px',
+                  }}
+                >
+                  {epData.tagline}
+                </p>
+              )}
+            </header>
+
+            {/* Tracklist */}
+            {epData.tracks.length > 0 && (
+              <section
+                style={{
+                  margin: '20px 0',
+                  padding: '20px',
+                  background: `linear-gradient(135deg, ${colors.secondary}15 0%, ${colors.primary}20 100%)`,
+                  border: `1px solid ${colors.secondary}`,
+                  borderRadius: '8px',
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1.5em',
+                    color: 'var(--color-accent)',
+                    borderBottom: `1px solid ${colors.accent}30`,
+                    paddingBottom: '8px',
+                    marginBottom: '15px',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  listen here
+                </h2>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-mono)',
+                    fontSize: '0.85em',
+                    fontStyle: 'italic',
+                    color: 'var(--color-secondary)',
+                    textAlign: 'center',
+                    marginBottom: '20px',
+                  }}
+                >
+                  Directly from the source
+                </p>
+
+                <ul style={{ listStyle: 'none', padding: 0, margin: 0 }}>
+                  {epData.tracks.map((track, index) => (
+                    <li
+                      key={track.id}
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        gap: '15px',
+                        padding: '15px',
+                        background:
+                          currentTrackIndex === index
+                            ? `${colors.secondary}30`
+                            : 'rgba(0, 0, 0, 0.2)',
+                        borderRadius: '6px',
+                        marginBottom: '10px',
+                        borderLeft:
+                          currentTrackIndex === index
+                            ? `3px solid ${colors.secondary}`
+                            : '3px solid transparent',
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: 'var(--font-mono)',
+                          fontSize: '0.9em',
+                          fontStyle: 'italic',
+                          color: 'var(--color-secondary)',
+                          minWidth: '24px',
+                        }}
+                      >
+                        {String(index + 1).padStart(2, '0')}
+                      </span>
+                      <button
+                        onClick={() => playTrack(index)}
+                        disabled={!track.audioPreview}
+                        style={{
+                          width: '44px',
+                          height: '44px',
+                          borderRadius: '50%',
+                          background: track.audioPreview
+                            ? 'var(--color-secondary)'
+                            : `${colors.secondary}50`,
+                          border: 'none',
+                          cursor: track.audioPreview ? 'pointer' : 'not-allowed',
+                          display: 'flex',
+                          alignItems: 'center',
+                          justifyContent: 'center',
+                          flexShrink: 0,
+                        }}
+                      >
+                        {currentTrackIndex === index && isPlaying ? (
+                          <Pause
+                            style={{ width: '18px', height: '18px', color: colors.paper }}
+                          />
+                        ) : (
+                          <Play
+                            style={{
+                              width: '18px',
+                              height: '18px',
+                              color: colors.paper,
+                              marginLeft: '2px',
+                            }}
+                          />
+                        )}
+                      </button>
+                      <div style={{ flex: 1 }}>
+                        <div
+                          style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '1.1em',
+                            color: 'var(--color-paper)',
+                          }}
+                        >
+                          {track.name || `Track ${index + 1}`}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: 'var(--font-mono)',
+                            fontSize: '0.75em',
+                            fontStyle: 'italic',
+                            color: 'var(--color-secondary)',
+                          }}
+                        >
+                          {track.duration || '—'}
+                        </div>
+                      </div>
+                      {epData.allowDownload && track.audioFile && (
+                        <a
+                          href={track.audioPreview}
+                          download={`${track.name || `track-${index + 1}`}.${track.audioFile?.name?.split('.').pop() || 'mp3'}`}
+                          style={{
+                            display: 'inline-flex',
+                            alignItems: 'center',
+                            gap: '4px',
+                            padding: '6px 10px',
+                            background: 'var(--color-secondary)',
+                            color: 'var(--color-paper)',
+                            textDecoration: 'none',
+                            borderRadius: '4px',
+                            fontFamily: 'var(--font-mono)',
+                            fontSize: '0.7em',
+                            fontStyle: 'italic',
+                            flexShrink: 0,
+                          }}
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            style={{ width: '12px', height: '12px', fill: 'currentColor' }}
+                          >
+                            <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z" />
+                          </svg>
+                          .{track.audioFile?.name?.split('.').pop() || 'mp3'}
+                        </a>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+
+                {/* Now Playing Bar */}
+                {currentTrack && (
+                  <div
+                    style={{
+                      background: 'var(--color-primary)',
+                      border: `1px solid ${colors.secondary}`,
+                      borderRadius: '8px',
+                      padding: '15px',
+                      marginTop: '20px',
+                    }}
+                  >
+                    <div
+                      style={{
+                        display: 'flex',
+                        alignItems: 'center',
+                        justifyContent: 'space-between',
+                        marginBottom: '10px',
+                      }}
+                    >
+                      <span
+                        style={{
+                          fontFamily: 'var(--font-mono)',
+                          fontSize: '0.7em',
+                          fontStyle: 'italic',
+                          color: 'var(--color-secondary)',
+                          textTransform: 'uppercase',
+                          letterSpacing: '1px',
+                        }}
+                      >
+                        now playing
+                      </span>
+                      <span
+                        style={{
+                          fontFamily: 'var(--font-body)',
+                          fontSize: '1em',
+                          color: 'var(--color-accent)',
+                        }}
+                      >
+                        {currentTrack.name || `Track ${currentTrackIndex + 1}`}
+                      </span>
+                    </div>
+
+                    <div
+                      onClick={handleProgressClick}
+                      style={{
+                        width: '100%',
+                        height: '6px',
+                        background: `${colors.secondary}50`,
+                        borderRadius: '3px',
+                        cursor: 'pointer',
+                        marginBottom: '10px',
+                      }}
+                    >
+                      <div
+                        style={{
+                          height: '100%',
+                          background: 'var(--color-secondary)',
+                          borderRadius: '3px',
+                          width: duration ? `${(currentTime / duration) * 100}%` : '0%',
+                          transition: 'width 0.1s linear',
+                        }}
+                      />
+                    </div>
+
+                    <div
+                      style={{
+                        display: 'flex',
+                        justifyContent: 'space-between',
+                        fontFamily: 'var(--font-mono)',
+                        fontSize: '0.75em',
+                        fontStyle: 'italic',
+                        color: 'var(--color-secondary)',
+                      }}
+                    >
+                      <span>{formatTime(currentTime)}</span>
+                      <span>{formatTime(duration)}</span>
+                    </div>
+
+                    {/* Lyrics Display */}
+                    {currentTrack.parsedLyrics && currentTrack.parsedLyrics.length > 0 && (
+                      <div
+                        style={{
+                          padding: '12px 15px',
+                          textAlign: 'center',
+                          borderTop: `1px solid ${colors.secondary}30`,
+                          marginTop: '10px',
+                        }}
+                      >
+                        <div
+                          style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '0.8em',
+                            color: 'var(--color-secondary)',
+                            opacity: 0.5,
+                            marginBottom: '4px',
+                          }}
+                        >
+                          {currentLyricIndex > 0
+                            ? currentTrack.parsedLyrics[currentLyricIndex - 1].text
+                            : ''}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '1em',
+                            color: 'var(--color-accent)',
+                          }}
+                        >
+                          {currentLyricIndex >= 0
+                            ? currentTrack.parsedLyrics[currentLyricIndex].text
+                            : `${currentTrack.name} — Lyrics`}
+                        </div>
+                        <div
+                          style={{
+                            fontFamily: 'var(--font-body)',
+                            fontSize: '0.8em',
+                            color: 'var(--color-secondary)',
+                            opacity: 0.5,
+                            marginTop: '4px',
+                          }}
+                        >
+                          {currentLyricIndex >= 0 &&
+                          currentLyricIndex < currentTrack.parsedLyrics.length - 1
+                            ? currentTrack.parsedLyrics[currentLyricIndex + 1].text
+                            : ''}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+              </section>
+            )}
+
+            {/* About Section */}
+            {epData.aboutText && (
+              <section
+                style={{
+                  margin: '20px 0',
+                  padding: '20px',
+                  background: `${colors.secondary}10`,
+                  border: `1px solid ${colors.secondary}`,
+                  borderRadius: '8px',
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1.5em',
+                    color: 'var(--color-accent)',
+                    borderBottom: `1px solid ${colors.accent}30`,
+                    paddingBottom: '8px',
+                    marginBottom: '15px',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  about the release
+                </h2>
+                <p
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1em',
+                    lineHeight: 1.8,
+                    margin: 0,
+                  }}
+                >
+                  {epData.aboutText}
+                </p>
+              </section>
+            )}
+
+            {/* Bandcamp Section */}
+            {epData.bandcampLink && (
+              <section
+                style={{
+                  margin: '20px 0',
+                  padding: '20px',
+                  background: `${colors.secondary}10`,
+                  border: `1px solid ${colors.secondary}`,
+                  borderRadius: '8px',
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1.5em',
+                    color: 'var(--color-accent)',
+                    borderBottom: `1px solid ${colors.accent}30`,
+                    paddingBottom: '8px',
+                    marginBottom: '15px',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  stream from bandcamp
+                </h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
+                  <a
+                    href={epData.bandcampLink}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: 'flex',
+                      flexDirection: 'column',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      padding: '18px 12px',
+                      background: 'var(--color-secondary)',
+                      color: 'var(--color-paper)',
+                      textDecoration: 'none',
+                      borderRadius: '8px',
+                      fontFamily: 'var(--font-body)',
+                      fontSize: '0.9em',
+                      minHeight: '90px',
+                      transition: 'all 0.2s ease',
+                    }}
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ width: '32px', height: '32px', fill: 'currentColor', marginBottom: '8px' }}>
+                      <path d="M0 18.75l7.437-13.5H24l-7.438 13.5H0z"/>
+                    </svg>
+                    Bandcamp
+                    <span style={{ fontSize: '0.75em', opacity: 0.8, marginTop: '4px' }}>+ download</span>
+                  </a>
+                </div>
+              </section>
+            )}
+
+            {/* Streaming Links Section */}
+            {epData.streamingLinks.filter(l => l.platform && !l.error).length > 0 && (
+              <section
+                style={{
+                  margin: '20px 0',
+                  padding: '20px',
+                  background: `${colors.secondary}10`,
+                  border: `1px solid ${colors.secondary}`,
+                  borderRadius: '8px',
+                }}
+              >
+                <h2
+                  style={{
+                    fontFamily: 'var(--font-body)',
+                    fontSize: '1.5em',
+                    color: 'var(--color-accent)',
+                    borderBottom: `1px solid ${colors.accent}30`,
+                    paddingBottom: '8px',
+                    marginBottom: '15px',
+                    textTransform: 'lowercase',
+                  }}
+                >
+                  {epData.streamingSectionTitle || 'stream from a billionaire'}
+                </h2>
+                <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(140px, 1fr))', gap: '12px' }}>
+                  {epData.streamingLinks.filter(l => l.platform && !l.error).map((link) => (
+                    <StreamingButton key={link.id} link={link} />
+                  ))}
+                </div>
+              </section>
+            )}
+
+            {/* Footer */}
+            <footer
+              style={{
+                fontFamily: 'var(--font-mono)',
+                fontSize: '0.85em',
+                fontStyle: 'italic',
+                textAlign: 'center',
+                marginTop: '40px',
+                paddingTop: '20px',
+                borderTop: `1px solid ${colors.secondary}`,
+                color: 'var(--color-accent)',
+              }}
+            >
+              &copy; {new Date().getFullYear()} {epData.artistName || 'Artist Name'}
+            </footer>
+          </div>
+        </div>
+      </div>
+
+      {/* Hidden Audio Element */}
+      <audio ref={audioRef} />
+
+      {/* Sticky Player */}
+      {currentTrackIndex !== null && (
+        <div
+          style={{
+            position: 'fixed',
+            bottom: 0,
+            left: 0,
+            right: 0,
+            background: colors.primary,
+            borderTop: `1px solid ${colors.secondary}`,
+            padding: 0,
+            zIndex: 1000,
+            boxShadow: '0 -4px 20px rgba(0, 0, 0, 0.4)',
+          }}
+        >
+          <div style={{ maxWidth: '900px', margin: '0 auto', padding: '12px 20px' }}>
+            <div style={{ display: 'flex', alignItems: 'center', gap: '15px' }}>
+              {/* Play/Pause Button */}
+              <button
+                onClick={togglePlayPause}
+                style={{
+                  width: '40px',
+                  height: '40px',
+                  borderRadius: '50%',
+                  background: colors.secondary,
+                  border: 'none',
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                }}
+              >
+                {isPlaying ? (
+                  <Pause style={{ width: '16px', height: '16px', color: colors.paper }} />
+                ) : (
+                  <Play style={{ width: '16px', height: '16px', color: colors.paper }} />
+                )}
+              </button>
+
+              {/* Track Info */}
+              <div style={{ flex: 1, minWidth: 0 }}>
+                <div
+                  style={{
+                    fontFamily: fonts.body,
+                    fontSize: '0.95em',
+                    color: colors.paper,
+                    whiteSpace: 'nowrap',
+                    overflow: 'hidden',
+                    textOverflow: 'ellipsis',
+                  }}
+                >
+                  {currentTrack?.name || 'Untitled'}
+                </div>
+                <div
+                  style={{
+                    fontFamily: fonts.mono,
+                    fontSize: '0.7em',
+                    fontStyle: 'italic',
+                    color: colors.secondary,
+                  }}
+                >
+                  {epData.artistName}
+                </div>
+              </div>
+
+              {/* Progress Bar */}
+              <div style={{ flex: 2, display: 'flex', alignItems: 'center', gap: '10px' }}>
+                <span
+                  style={{
+                    fontFamily: fonts.mono,
+                    fontSize: '0.7em',
+                    fontStyle: 'italic',
+                    color: colors.secondary,
+                    minWidth: '35px',
+                  }}
+                >
+                  {formatTime(currentTime)}
+                </span>
+                <div
+                  onClick={handleProgressClick}
+                  style={{
+                    flex: 1,
+                    height: '6px',
+                    background: `${colors.secondary}50`,
+                    borderRadius: '3px',
+                    cursor: 'pointer',
+                    position: 'relative',
+                  }}
+                >
+                  <div
+                    style={{
+                      height: '100%',
+                      background: colors.secondary,
+                      borderRadius: '3px',
+                      width: `${duration ? (currentTime / duration) * 100 : 0}%`,
+                      transition: 'width 0.1s linear',
+                    }}
+                  />
+                </div>
+                <span
+                  style={{
+                    fontFamily: fonts.mono,
+                    fontSize: '0.7em',
+                    fontStyle: 'italic',
+                    color: colors.secondary,
+                    minWidth: '35px',
+                  }}
+                >
+                  {formatTime(duration)}
+                </span>
+              </div>
+
+              {/* Close Button */}
+              <button
+                onClick={closeStickyPlayer}
+                style={{
+                  width: '32px',
+                  height: '32px',
+                  borderRadius: '50%',
+                  background: 'transparent',
+                  border: `1px solid ${colors.secondary}`,
+                  cursor: 'pointer',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  flexShrink: 0,
+                  opacity: 0.6,
+                }}
+              >
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" style={{ width: '14px', height: '14px', fill: colors.paper }}>
+                  <path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/>
+                </svg>
+              </button>
+            </div>
+
+            {/* Lyrics */}
+            {currentTrack?.parsedLyrics && currentTrack.parsedLyrics.length > 0 && (
+              <div
+                style={{
+                  textAlign: 'center',
+                  padding: '10px 0 0 0',
+                  borderTop: `1px solid ${colors.secondary}30`,
+                  marginTop: '10px',
+                }}
+              >
+                <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: '3px' }}>
+                  {/* Previous Line */}
+                  <div
+                    style={{
+                      fontFamily: fonts.body,
+                      fontSize: '0.75em',
+                      color: colors.secondary,
+                      opacity: 0.4,
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {currentLyricIndex > 0 ? currentTrack.parsedLyrics[currentLyricIndex - 1]?.text : ''}
+                  </div>
+                  {/* Current Line */}
+                  <div
+                    style={{
+                      fontFamily: fonts.body,
+                      fontSize: '0.9em',
+                      color: colors.accent,
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {currentLyricIndex >= 0 ? currentTrack.parsedLyrics[currentLyricIndex]?.text : ''}
+                  </div>
+                  {/* Next Line */}
+                  <div
+                    style={{
+                      fontFamily: fonts.body,
+                      fontSize: '0.75em',
+                      color: colors.secondary,
+                      opacity: 0.4,
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    {currentLyricIndex >= 0 && currentLyricIndex < currentTrack.parsedLyrics.length - 1
+                      ? currentTrack.parsedLyrics[currentLyricIndex + 1]?.text
+                      : ''}
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+}
+</file>
+
+<file path="src/components/Sidebar.jsx">
+import { useEP } from '../context/EPContext';
+import { Plus, Trash2, GripVertical, Upload, Music, FileText, RotateCcw, Save, Clock } from 'lucide-react';
+import { useRef } from 'react';
+import ColorPicker from './ColorPicker';
+
+function parseLRC(lrcContent) {
+  const lines = lrcContent.split('\n');
+  const lyrics = [];
+  
+  for (const line of lines) {
+    const match = line.match(/\[(\d{2}):(\d{2})\.(\d{2,3})\](.+)/);
+    if (match) {
+      const minutes = parseInt(match[1], 10);
+      const seconds = parseInt(match[2], 10);
+      const ms = parseInt(match[3], 10);
+      const time = minutes * 60 + seconds + ms / (match[3].length === 2 ? 100 : 1000);
+      const text = match[4].trim();
+      if (text) {
+        lyrics.push({ time, text });
+      }
+    }
+  }
+  
+  return lyrics.sort((a, b) => a.time - b.time);
+}
+
+function TrackItem({ track, index }) {
+  const { updateTrack, removeTrack } = useEP();
+  const audioInputRef = useRef(null);
+  const lrcInputRef = useRef(null);
+
+  const handleAudioUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const preview = URL.createObjectURL(file);
+      const audio = new Audio(preview);
+      audio.addEventListener('loadedmetadata', () => {
+        const mins = Math.floor(audio.duration / 60);
+        const secs = Math.floor(audio.duration % 60);
+        updateTrack(track.id, 'duration', `${mins}:${secs.toString().padStart(2, '0')}`);
+      });
+      updateTrack(track.id, 'audioFile', file);
+      updateTrack(track.id, 'audioPreview', preview);
+    }
+  };
+
+  const handleLRCUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        const content = e.target?.result;
+        const parsed = parseLRC(content);
+        updateTrack(track.id, 'lyricsFile', file);
+        updateTrack(track.id, 'parsedLyrics', parsed);
+        updateTrack(track.id, 'lyricsType', 'lrc');
+      };
+      reader.readAsText(file);
+    }
+  };
+
+  return (
+    <div className="bg-zinc-800 rounded-lg p-4 border border-zinc-700">
+      <div className="flex items-center gap-2 mb-3">
+        <GripVertical className="w-4 h-4 text-zinc-500 cursor-grab" />
+        <span className="text-zinc-400 text-sm font-mono">
+          {String(index + 1).padStart(2, '0')}
+        </span>
+        <input
+          type="text"
+          value={track.name}
+          onChange={(e) => updateTrack(track.id, 'name', e.target.value)}
+          placeholder="Track Name"
+          className="flex-1 bg-zinc-900 border border-zinc-600 rounded px-3 py-1.5 text-white text-sm focus:outline-none focus:border-amber-500"
+        />
+        <button
+          onClick={() => removeTrack(track.id)}
+          className="p-1.5 text-zinc-400 hover:text-red-400 transition-colors"
+        >
+          <Trash2 className="w-4 h-4" />
+        </button>
+      </div>
+
+      <input
+        type="text"
+        value={track.description}
+        onChange={(e) => updateTrack(track.id, 'description', e.target.value)}
+        placeholder="Short description (optional)"
+        className="w-full bg-zinc-900 border border-zinc-600 rounded px-3 py-1.5 text-white text-sm mb-3 focus:outline-none focus:border-amber-500"
+      />
+
+      <div className="grid grid-cols-2 gap-2 mb-3">
+        <input
+          ref={audioInputRef}
+          type="file"
+          accept=".mp3,.wav"
+          onChange={handleAudioUpload}
+          className="hidden"
+        />
+        <button
+          onClick={() => audioInputRef.current?.click()}
+          className={`flex items-center justify-center gap-2 px-3 py-2 rounded text-sm transition-colors ${
+            track.audioFile
+              ? 'bg-green-900/50 border border-green-700 text-green-300'
+              : 'bg-zinc-700 border border-zinc-600 text-zinc-300 hover:bg-zinc-600'
+          }`}
+        >
+          <Music className="w-4 h-4" />
+          {track.audioFile ? 'Audio Added' : 'Upload Audio'}
+        </button>
+
+        <input
+          ref={lrcInputRef}
+          type="file"
+          accept=".lrc"
+          onChange={handleLRCUpload}
+          className="hidden"
+        />
+        <button
+          onClick={() => lrcInputRef.current?.click()}
+          className={`flex items-center justify-center gap-2 px-3 py-2 rounded text-sm transition-colors ${
+            track.lyricsType === 'lrc'
+              ? 'bg-green-900/50 border border-green-700 text-green-300'
+              : 'bg-zinc-700 border border-zinc-600 text-zinc-300 hover:bg-zinc-600'
+          }`}
+        >
+          <FileText className="w-4 h-4" />
+          {track.lyricsType === 'lrc' ? 'LRC Added' : 'Upload .lrc'}
+        </button>
+      </div>
+
+      <div>
+        <label className="text-xs text-zinc-400 mb-1 block">Plain Text Lyrics (optional)</label>
+        <textarea
+          value={track.lyricsText}
+          onChange={(e) => {
+            updateTrack(track.id, 'lyricsText', e.target.value);
+            if (e.target.value && track.lyricsType !== 'lrc') {
+              updateTrack(track.id, 'lyricsType', 'text');
+            } else if (!e.target.value && track.lyricsType === 'text') {
+              updateTrack(track.id, 'lyricsType', 'none');
+            }
+          }}
+          placeholder="Paste lyrics here..."
+          rows={3}
+          className="w-full bg-zinc-900 border border-zinc-600 rounded px-3 py-2 text-white text-sm focus:outline-none focus:border-amber-500 resize-none"
+        />
+      </div>
+    </div>
+  );
+}
+
+export default function Sidebar() {
+  const { epData, fontPairs, updateField, updateColor, addTrack, setArtwork, addStreamingLink, updateStreamingLink, removeStreamingLink, resetProject, lastSaveTime, isSaving } = useEP();
+  const artworkInputRef = useRef(null);
+
+  const handleArtworkUpload = (e) => {
+    const file = e.target.files?.[0];
+    if (file) {
+      setArtwork(file);
+    }
+  };
+
+  const formatSaveTime = (date) => {
+    if (!date) return '';
+    const now = new Date();
+    const diff = Math.floor((now - date) / 1000);
+    
+    if (diff < 60) return 'just now';
+    if (diff < 3600) return `${Math.floor(diff / 60)}m ago`;
+    if (diff < 86400) return `${Math.floor(diff / 3600)}h ago`;
+    return date.toLocaleDateString();
+  };
+
+  return (
+    <aside className="w-96 bg-zinc-900 border-r border-zinc-800 h-screen overflow-y-auto flex flex-col">
+      <div className="p-4 border-b border-zinc-800">
+        <div className="flex items-center justify-between mb-2">
+          <h1 className="text-xl font-bold text-white flex items-center gap-2">
+            <span className="text-amber-500">●</span> Pressed
+          </h1>
+          <div className="flex items-center gap-3">
+            <button
+              onClick={resetProject}
+              className="p-2 text-zinc-400 hover:text-red-400 hover:bg-red-900/20 rounded transition-colors border border-transparent hover:border-red-800"
+              title="Reset Project (clears all data)"
+            >
+              <RotateCcw className="w-4 h-4" />
+            </button>
+          </div>
+        </div>
+        {/* Save Status Indicator */}
+        <div className="flex items-center gap-2 text-xs text-zinc-500">
+          {isSaving ? (
+            <>
+              <Save className="w-3 h-3 animate-pulse" />
+              <span>Saving...</span>
+            </>
+          ) : lastSaveTime ? (
+            <>
+              <Clock className="w-3 h-3" />
+              <span>Saved {formatSaveTime(lastSaveTime)}</span>
+            </>
+          ) : (
+            <>
+              <Save className="w-3 h-3" />
+              <span>Auto-save enabled</span>
+            </>
+          )}
+        </div>
+        <p className="text-zinc-400 text-sm mt-1">Music landing page Generator</p>
+      </div>
+
+      <div className="flex-1 overflow-y-auto p-4 space-y-6">
+        {/* Global Meta */}
+        <section>
+          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
+            Release Details
+          </h2>
+          <div className="space-y-3">
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Artist Name</label>
+              <input
+                type="text"
+                value={epData.artistName}
+                onChange={(e) => updateField('artistName', e.target.value)}
+                placeholder="Your Name"
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white focus:outline-none focus:border-amber-500"
+              />
+            </div>
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Release Title</label>
+              <input
+                type="text"
+                value={epData.epTitle}
+                onChange={(e) => updateField('epTitle', e.target.value)}
+                placeholder="Album Title"
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white focus:outline-none focus:border-amber-500"
+              />
+            </div>
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Tagline</label>
+              <input
+                type="text"
+                value={epData.tagline}
+                onChange={(e) => updateField('tagline', e.target.value)}
+                placeholder="A short description of your release"
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white focus:outline-none focus:border-amber-500"
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Artwork */}
+        <section>
+          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
+            Artwork
+          </h2>
+          <input
+            ref={artworkInputRef}
+            type="file"
+            accept="image/*"
+            onChange={handleArtworkUpload}
+            className="hidden"
+          />
+          <button
+            onClick={() => artworkInputRef.current?.click()}
+            className="w-full aspect-square bg-zinc-800 border-2 border-dashed border-zinc-600 rounded-lg flex flex-col items-center justify-center gap-2 hover:border-amber-500 transition-colors overflow-hidden"
+          >
+            {epData.artworkPreview ? (
+              <img
+                src={epData.artworkPreview}
+                alt="Album artwork"
+                className="w-full h-full object-cover"
+              />
+            ) : (
+              <>
+                <Upload className="w-8 h-8 text-zinc-500" />
+                <span className="text-zinc-400 text-sm">Upload Album Art</span>
+                <span className="text-zinc-500 text-xs">Recommended: 1400x1400</span>
+              </>
+            )}
+          </button>
+        </section>
+
+        {/* Style Controls */}
+        <section>
+          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
+            Style
+          </h2>
+          <div className="space-y-3">
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Font Pair</label>
+              <select
+                value={epData.fontPair}
+                onChange={(e) => updateField('fontPair', e.target.value)}
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white focus:outline-none focus:border-amber-500"
+              >
+                {Object.entries(fontPairs).map(([key, pair]) => (
+                  <option key={key} value={key}>
+                    {pair.name}
+                  </option>
+                ))}
+              </select>
+            </div>
+
+            <div className="grid grid-cols-2 gap-3">
+              <ColorPicker
+                label="Background"
+                value={epData.colors.primary}
+                onChange={(value) => updateColor('primary', value)}
+              />
+              <ColorPicker
+                label="Secondary"
+                value={epData.colors.secondary}
+                onChange={(value) => updateColor('secondary', value)}
+              />
+              <ColorPicker
+                label="Accent"
+                value={epData.colors.accent}
+                onChange={(value) => updateColor('accent', value)}
+              />
+              <ColorPicker
+                label="Text"
+                value={epData.colors.paper}
+                onChange={(value) => updateColor('paper', value)}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Track Manager */}
+        <section>
+          <div className="flex items-center justify-between mb-3">
+            <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider">
+              Tracks ({epData.tracks.length})
+            </h2>
+            {epData.tracks.length === 0 && (
+              <button
+                onClick={addTrack}
+                className="flex items-center gap-1 px-2 py-1 bg-amber-600 hover:bg-amber-500 text-white rounded text-sm transition-colors"
+              >
+                <Plus className="w-4 h-4" />
+                Add Track
+              </button>
+            )}
+          </div>
+          <div className="space-y-3">
+            {epData.tracks.length === 0 ? (
+              <div className="text-center py-8 text-zinc-500 text-sm">
+                No tracks yet. Click "Add Track" to begin.
+              </div>
+            ) : (
+              <>
+                {epData.tracks.map((track, index) => (
+                  <TrackItem key={track.id} track={track} index={index} />
+                ))}
+                <button
+                  onClick={addTrack}
+                  className="w-full flex items-center justify-center gap-1 px-3 py-2 bg-amber-600 hover:bg-amber-500 text-white rounded text-sm transition-colors"
+                >
+                  <Plus className="w-4 h-4" />
+                  Add Track
+                </button>
+              </>
+            )}
+          </div>
+        </section>
+
+        {/* About Section */}
+        <section>
+          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
+            About
+          </h2>
+          <div className="space-y-3">
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">About the Release</label>
+              <textarea
+                value={epData.aboutText}
+                onChange={(e) => updateField('aboutText', e.target.value)}
+                placeholder="Tell the story behind your music..."
+                rows={3}
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white focus:outline-none focus:border-amber-500 resize-none"
+              />
+            </div>
+            <div className="flex items-center gap-2">
+              <input
+                type="checkbox"
+                id="allowDownload"
+                checked={epData.allowDownload}
+                onChange={(e) => updateField('allowDownload', e.target.checked)}
+                className="w-4 h-4 rounded border-zinc-600 bg-zinc-800 text-amber-600 focus:ring-amber-500 focus:ring-offset-zinc-900 cursor-pointer"
+              />
+              <label htmlFor="allowDownload" className="text-sm text-zinc-300 cursor-pointer">
+                Allow track downloads?
+              </label>
+            </div>
+          </div>
+        </section>
+
+        {/* Streaming Links */}
+        <section>
+          <h2 className="text-sm font-semibold text-zinc-300 uppercase tracking-wider mb-3">
+            Streaming Links
+          </h2>
+          <div className="space-y-3">
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Bandcamp Link</label>
+              <input
+                type="url"
+                value={epData.bandcampLink}
+                onChange={(e) => updateField('bandcampLink', e.target.value)}
+                placeholder="https://yourname.bandcamp.com/album/..."
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white text-sm focus:outline-none focus:border-amber-500"
+              />
+            </div>
+            <div>
+              <label className="text-xs text-zinc-400 mb-1 block">Section Title</label>
+              <input
+                type="text"
+                value={epData.streamingSectionTitle}
+                onChange={(e) => updateField('streamingSectionTitle', e.target.value)}
+                placeholder="stream from a billionaire"
+                className="w-full bg-zinc-800 border border-zinc-700 rounded px-3 py-2 text-white text-sm focus:outline-none focus:border-amber-500"
+              />
+            </div>
+            <div>
+              <div className="flex items-center justify-between mb-2">
+                <label className="text-xs text-zinc-400">Platform Links</label>
+                <button
+                  onClick={addStreamingLink}
+                  className="text-xs text-amber-500 hover:text-amber-400 flex items-center gap-1"
+                >
+                  <Plus className="w-3 h-3" /> Add Link
+                </button>
+              </div>
+              {epData.streamingLinks.length === 0 ? (
+                <p className="text-xs text-zinc-500 italic">No streaming links added</p>
+              ) : (
+                <div className="space-y-2">
+                  {epData.streamingLinks.map((link) => (
+                    <div key={link.id} className="space-y-1">
+                      <div className="flex gap-2">
+                        <input
+                          type="url"
+                          value={link.url}
+                          onChange={(e) => updateStreamingLink(link.id, e.target.value)}
+                          placeholder="https://open.spotify.com/..."
+                          className={`flex-1 bg-zinc-800 border rounded px-3 py-2 text-white text-sm focus:outline-none ${
+                            link.error ? 'border-red-500' : 'border-zinc-700 focus:border-amber-500'
+                          }`}
+                        />
+                        <button
+                          onClick={() => removeStreamingLink(link.id)}
+                          className="p-2 text-zinc-400 hover:text-red-400"
+                        >
+                          <Trash2 className="w-4 h-4" />
+                        </button>
+                      </div>
+                      {link.error && (
+                        <p className="text-xs text-red-400">{link.error}</p>
+                      )}
+                      {link.platform && !link.error && (
+                        <p className="text-xs text-green-400 capitalize">✓ {link.platform.replace(/([A-Z])/g, ' $1').trim()}</p>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <div className="p-4 border-t border-zinc-800 bg-zinc-900/50 text-center text-xs text-zinc-500">
+        Privacy First — Your music stays in your browser
+      </div>
+    </aside>
+  );
+}
+</file>
+
+<file path="src/context/EPContext.jsx">
+import { createContext, useContext, useState, useEffect, useRef } from 'react';
+import {
+  saveMetadata,
+  getMetadata,
+  saveAudioFile,
+  saveArtworkFile,
+  getAudioFile,
+  getArtworkFile,
+  deleteAudioFile,
+  resetAllData,
+  getLastSaveTime,
+} from '../utils/storage';
+
+const EPContext = createContext(null);
+
+const emptyEPData = {
+  artistName: '',
+  epTitle: '',
+  tagline: '',
+  aboutText: '',
+  allowDownload: false,
+  artwork: null,
+  artworkPreview: null,
+  colors: {
+    primary: '#222222',
+    secondary: '#4F6A89',
+    accent: '#D8A34A',
+    paper: '#F4F0E6',
+  },
+  fontPair: 'serif',
+  tracks: [],
+  bandcampLink: '',
+  streamingLinks: [],
+  streamingSectionTitle: 'stream from a billionaire',
+};
+
+// Platform detection for streaming links
+const platformPatterns = {
+  spotify: /^https?:\/\/(open\.)?spotify\.com\//i,
+  appleMusic: /^https?:\/\/music\.apple\.com\//i,
+  youtubeMusic: /^https?:\/\/music\.youtube\.com\//i,
+  tidal: /^https?:\/\/(www\.)?tidal\.com\//i,
+  amazonMusic: /^https?:\/\/music\.amazon\.com\//i,
+  behindTheScenes: /^https?:\/\/(www\.)?behindthescenes\./i,
+};
+
+function detectPlatform(url) {
+  if (!url) return null;
+  for (const [platform, pattern] of Object.entries(platformPatterns)) {
+    if (pattern.test(url)) return platform;
+  }
+  return null;
+}
+
+const fontPairs = {
+  serif: {
+    name: 'Serif / Analog',
+    heading: 'Georgia, serif',
+    body: 'Georgia, serif',
+    mono: "'Courier New', monospace",
+  },
+  mono: {
+    name: 'Mono / Tech',
+    heading: "'Courier New', monospace",
+    body: 'system-ui, sans-serif',
+    mono: "'Courier New', monospace",
+  },
+  sans: {
+    name: 'Sans / Modern',
+    heading: 'system-ui, sans-serif',
+    body: 'system-ui, sans-serif',
+    mono: "'Courier New', monospace",
+  },
+};
+
+export function EPProvider({ children }) {
+  const [epData, setEPData] = useState(emptyEPData);
+  const [isHydrated, setIsHydrated] = useState(false);
+  const [lastSaveTime, setLastSaveTime] = useState(null);
+  const [isSaving, setIsSaving] = useState(false);
+  const isInitialMount = useRef(true);
+
+  // Hydrate data from storage on mount
+  useEffect(() => {
+    async function hydrateData() {
+      try {
+        const metadata = getMetadata();
+        if (!metadata) {
+          setIsHydrated(true);
+          return;
+        }
+
+        // Restore metadata - explicitly preserve all fields
+        const restoredData = {
+          ...emptyEPData,
+          epTitle: metadata.epTitle,
+          artistName: metadata.artistName,
+          tagline: metadata.tagline,
+          aboutText: metadata.aboutText,
+          allowDownload: metadata.allowDownload,
+          colors: metadata.colors,
+          fontPair: metadata.fontPair,
+          bandcampLink: metadata.bandcampLink,
+          streamingLinks: metadata.streamingLinks,
+          streamingSectionTitle: metadata.streamingSectionTitle,
+          tracks: [],
+          artwork: null,
+          artworkPreview: null,
+        };
+
+        // Restore artwork if it exists
+        if (metadata.hasArtwork) {
+          const artworkFile = await getArtworkFile();
+          if (artworkFile) {
+            restoredData.artwork = artworkFile;
+            restoredData.artworkPreview = URL.createObjectURL(artworkFile);
+          }
+        }
+
+        // Restore tracks with their audio files
+        for (const trackMeta of metadata.tracks) {
+          const track = { ...trackMeta };
+          
+          if (trackMeta.hasAudioFile) {
+            const audioFile = await getAudioFile(trackMeta.id);
+            if (audioFile) {
+              track.audioFile = audioFile;
+              track.audioPreview = URL.createObjectURL(audioFile);
+            }
+          }
+
+          restoredData.tracks.push(track);
+        }
+
+        setEPData(restoredData);
+        setLastSaveTime(getLastSaveTime());
+        console.log('✅ Project restored from storage');
+      } catch (error) {
+        console.error('Failed to hydrate data:', error);
+      } finally {
+        setIsHydrated(true);
+      }
+    }
+
+    hydrateData();
+  }, []);
+
+  // Auto-save effect - triggers on epData changes
+  useEffect(() => {
+    // Skip on initial mount and before hydration
+    if (isInitialMount.current || !isHydrated) {
+      isInitialMount.current = false;
+      return;
+    }
+
+    const saveData = async () => {
+      try {
+        setIsSaving(true);
+
+        // Save metadata to localStorage
+        saveMetadata(epData);
+
+        // Save artwork to IndexedDB if it exists
+        if (epData.artwork) {
+          await saveArtworkFile(epData.artwork);
+        }
+
+        // Save audio files to IndexedDB
+        for (const track of epData.tracks) {
+          if (track.audioFile) {
+            await saveAudioFile(track.id, track.audioFile);
+          }
+        }
+
+        setLastSaveTime(new Date());
+        console.log('💾 Auto-saved');
+      } catch (error) {
+        console.error('Auto-save failed:', error);
+      } finally {
+        setIsSaving(false);
+      }
+    };
+
+    // Debounce auto-save by 1 second
+    const timeoutId = setTimeout(saveData, 1000);
+    return () => clearTimeout(timeoutId);
+  }, [epData, isHydrated]);
+
+  const updateField = (field, value) => {
+    setEPData((prev) => ({ ...prev, [field]: value }));
+  };
+
+  const updateColor = (colorKey, value) => {
+    setEPData((prev) => ({
+      ...prev,
+      colors: { ...prev.colors, [colorKey]: value },
+    }));
+  };
+
+  const addTrack = () => {
+    const newTrack = {
+      id: Date.now(),
+      name: '',
+      description: '',
+      duration: '',
+      audioFile: null,
+      audioPreview: null,
+      lyricsType: 'none',
+      lyricsText: '',
+      lyricsFile: null,
+      parsedLyrics: null,
+    };
+    setEPData((prev) => ({
+      ...prev,
+      tracks: [...prev.tracks, newTrack],
+    }));
+  };
+
+  const updateTrack = (trackId, field, value) => {
+    setEPData((prev) => ({
+      ...prev,
+      tracks: prev.tracks.map((t) =>
+        t.id === trackId ? { ...t, [field]: value } : t
+      ),
+    }));
+  };
+
+  const removeTrack = async (trackId) => {
+    // Delete audio file from IndexedDB
+    try {
+      await deleteAudioFile(trackId);
+    } catch (error) {
+      console.error('Failed to delete audio file:', error);
+    }
+    
+    setEPData((prev) => ({
+      ...prev,
+      tracks: prev.tracks.filter((t) => t.id !== trackId),
+    }));
+  };
+
+  const reorderTracks = (fromIndex, toIndex) => {
+    setEPData((prev) => {
+      const newTracks = [...prev.tracks];
+      const [removed] = newTracks.splice(fromIndex, 1);
+      newTracks.splice(toIndex, 0, removed);
+      return { ...prev, tracks: newTracks };
+    });
+  };
+
+  const setArtwork = (file) => {
+    if (file) {
+      const preview = URL.createObjectURL(file);
+      setEPData((prev) => ({
+        ...prev,
+        artwork: file,
+        artworkPreview: preview,
+      }));
+    }
+  };
+
+  const addStreamingLink = () => {
+    const newLink = {
+      id: Date.now(),
+      url: '',
+      platform: null,
+      error: null,
+    };
+    setEPData((prev) => ({
+      ...prev,
+      streamingLinks: [...prev.streamingLinks, newLink],
+    }));
+  };
+
+  const updateStreamingLink = (linkId, url) => {
+    const platform = detectPlatform(url);
+    const error = url && !platform ? 'Please provide a valid URL to a streaming platform owned by a billionaire' : null;
+    setEPData((prev) => ({
+      ...prev,
+      streamingLinks: prev.streamingLinks.map((link) =>
+        link.id === linkId ? { ...link, url, platform, error } : link
+      ),
+    }));
+  };
+
+  const removeStreamingLink = (linkId) => {
+    setEPData((prev) => ({
+      ...prev,
+      streamingLinks: prev.streamingLinks.filter((link) => link.id !== linkId),
+    }));
+  };
+
+  const resetProject = async () => {
+    if (window.confirm('Are you sure you want to reset the project? This will clear all data and cannot be undone.')) {
+      try {
+        await resetAllData();
+        setEPData(emptyEPData);
+        setLastSaveTime(null);
+        console.log('🗑️ Project reset');
+      } catch (error) {
+        console.error('Failed to reset project:', error);
+        alert('Failed to reset project. Please try again.');
+      }
+    }
+  };
+
+  const value = {
+    epData,
+    fontPairs,
+    updateField,
+    updateColor,
+    addTrack,
+    updateTrack,
+    removeTrack,
+    reorderTracks,
+    setArtwork,
+    addStreamingLink,
+    updateStreamingLink,
+    removeStreamingLink,
+    resetProject,
+    lastSaveTime,
+    isSaving,
+    isHydrated,
+  };
+
+  return <EPContext.Provider value={value}>{children}</EPContext.Provider>;
+}
+
+export function useEP() {
+  const context = useContext(EPContext);
+  if (!context) {
+    throw new Error('useEP must be used within an EPProvider');
+  }
+  return context;
+}
+</file>
+
+<file path="src/utils/storage.js">
+// IndexedDB utility for storing large files (audio and artwork)
+const DB_NAME = 'PressedDB';
+const DB_VERSION = 1;
+const AUDIO_STORE = 'audioFiles';
+const ARTWORK_STORE = 'artworkFiles';
+
+let dbInstance = null;
+
+// Initialize IndexedDB
+export async function initDB() {
+  if (dbInstance) return dbInstance;
+
+  return new Promise((resolve, reject) => {
+    const request = indexedDB.open(DB_NAME, DB_VERSION);
+
+    request.onerror = () => reject(request.error);
+    request.onsuccess = () => {
+      dbInstance = request.result;
+      resolve(dbInstance);
+    };
+
+    request.onupgradeneeded = (event) => {
+      const db = event.target.result;
+
+      // Create object stores if they don't exist
+      if (!db.objectStoreNames.contains(AUDIO_STORE)) {
+        db.createObjectStore(AUDIO_STORE, { keyPath: 'id' });
+      }
+      if (!db.objectStoreNames.contains(ARTWORK_STORE)) {
+        db.createObjectStore(ARTWORK_STORE, { keyPath: 'id' });
+      }
+    };
+  });
+}
+
+// Store audio file
+export async function saveAudioFile(id, file) {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([AUDIO_STORE], 'readwrite');
+    const store = transaction.objectStore(AUDIO_STORE);
+    const request = store.put({ id, file, timestamp: Date.now() });
+
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Get audio file
+export async function getAudioFile(id) {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([AUDIO_STORE], 'readonly');
+    const store = transaction.objectStore(AUDIO_STORE);
+    const request = store.get(id);
+
+    request.onsuccess = () => resolve(request.result?.file || null);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Delete audio file
+export async function deleteAudioFile(id) {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([AUDIO_STORE], 'readwrite');
+    const store = transaction.objectStore(AUDIO_STORE);
+    const request = store.delete(id);
+
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Store artwork file
+export async function saveArtworkFile(file) {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([ARTWORK_STORE], 'readwrite');
+    const store = transaction.objectStore(ARTWORK_STORE);
+    const request = store.put({ id: 'artwork', file, timestamp: Date.now() });
+
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Get artwork file
+export async function getArtworkFile() {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([ARTWORK_STORE], 'readonly');
+    const store = transaction.objectStore(ARTWORK_STORE);
+    const request = store.get('artwork');
+
+    request.onsuccess = () => resolve(request.result?.file || null);
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Delete artwork file
+export async function deleteArtworkFile() {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([ARTWORK_STORE], 'readwrite');
+    const store = transaction.objectStore(ARTWORK_STORE);
+    const request = store.delete('artwork');
+
+    request.onsuccess = () => resolve();
+    request.onerror = () => reject(request.error);
+  });
+}
+
+// Clear all data from IndexedDB
+export async function clearAllFiles() {
+  const db = await initDB();
+  return new Promise((resolve, reject) => {
+    const transaction = db.transaction([AUDIO_STORE, ARTWORK_STORE], 'readwrite');
+    
+    const audioStore = transaction.objectStore(AUDIO_STORE);
+    const artworkStore = transaction.objectStore(ARTWORK_STORE);
+    
+    audioStore.clear();
+    artworkStore.clear();
+
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error);
+  });
+}
+
+// LocalStorage utilities for metadata
+const METADATA_KEY = 'pressed_metadata';
+const LAST_SAVE_KEY = 'pressed_last_save';
+
+export function saveMetadata(epData) {
+  try {
+    // Create a serializable version of epData (without File objects)
+    const metadata = {
+      epTitle: epData.epTitle,
+      artistName: epData.artistName,
+      tagline: epData.tagline,
+      aboutText: epData.aboutText,
+      colors: epData.colors,
+      fontPair: epData.fontPair,
+      allowDownload: epData.allowDownload,
+      bandcampLink: epData.bandcampLink,
+      streamingLinks: epData.streamingLinks,
+      streamingSectionTitle: epData.streamingSectionTitle,
+      tracks: epData.tracks.map(track => ({
+        id: track.id,
+        name: track.name,
+        description: track.description,
+        duration: track.duration,
+        lyrics: track.lyrics,
+        lyricsType: track.lyricsType,
+        parsedLyrics: track.parsedLyrics,
+        // Store file metadata but not the actual File object
+        hasAudioFile: !!track.audioFile,
+        audioFileName: track.audioFile?.name,
+        hasAudioPreview: !!track.audioPreview,
+      })),
+      // Store artwork metadata
+      hasArtwork: !!epData.artwork,
+      artworkName: epData.artwork?.name,
+      hasArtworkPreview: !!epData.artworkPreview,
+    };
+
+    localStorage.setItem(METADATA_KEY, JSON.stringify(metadata));
+    localStorage.setItem(LAST_SAVE_KEY, new Date().toISOString());
+    return true;
+  } catch (error) {
+    console.error('Failed to save metadata to localStorage:', error);
+    return false;
+  }
+}
+
+export function getMetadata() {
+  try {
+    const data = localStorage.getItem(METADATA_KEY);
+    return data ? JSON.parse(data) : null;
+  } catch (error) {
+    console.error('Failed to load metadata from localStorage:', error);
+    return null;
+  }
+}
+
+export function getLastSaveTime() {
+  try {
+    const timestamp = localStorage.getItem(LAST_SAVE_KEY);
+    return timestamp ? new Date(timestamp) : null;
+  } catch (error) {
+    return null;
+  }
+}
+
+export function clearMetadata() {
+  try {
+    localStorage.removeItem(METADATA_KEY);
+    localStorage.removeItem(LAST_SAVE_KEY);
+    return true;
+  } catch (error) {
+    console.error('Failed to clear metadata from localStorage:', error);
+    return false;
+  }
+}
+
+// Complete reset - clears both localStorage and IndexedDB
+export async function resetAllData() {
+  clearMetadata();
+  await clearAllFiles();
+}
+</file>
+
+<file path="src/App.jsx">
+import { EPProvider } from './context/EPContext'
+import Sidebar from './components/Sidebar'
+import Preview from './components/Preview'
+import ExportButton from './components/ExportButton'
+
+function App() {
+  return (
+    <EPProvider>
+      <div className="flex h-screen bg-zinc-950 overflow-hidden">
+        <Sidebar />
+        <div className="flex-1 flex flex-col">
+          <div className="flex items-center justify-between px-4 py-3 bg-zinc-900 border-b border-zinc-800">
+            <div className="flex items-center gap-4">
+              <span className="text-zinc-400 text-sm">Preview your Music landing page</span>
+            </div>
+            <ExportButton />
+          </div>
+          <Preview />
+        </div>
+      </div>
+    </EPProvider>
+  )
+}
+
+export default App
+</file>
+
+<file path="src/index.css">
+@import "tailwindcss";
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    @apply m-0 font-sans antialiased;
+  }
+}
+</file>
+
+<file path="src/main.jsx">
+import { StrictMode } from 'react'
+import { createRoot } from 'react-dom/client'
+import './index.css'
+import App from './App.jsx'
+
+createRoot(document.getElementById('root')).render(
+  <StrictMode>
+    <App />
+  </StrictMode>,
+)
+</file>
+
+<file path=".gitignore">
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+</file>
+
+<file path="eslint.config.js">
+import js from '@eslint/js'
+import globals from 'globals'
+import reactHooks from 'eslint-plugin-react-hooks'
+import reactRefresh from 'eslint-plugin-react-refresh'
+import { defineConfig, globalIgnores } from 'eslint/config'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{js,jsx}'],
+    extends: [
+      js.configs.recommended,
+      reactHooks.configs.flat.recommended,
+      reactRefresh.configs.vite,
+    ],
+    languageOptions: {
+      ecmaVersion: 2020,
+      globals: globals.browser,
+      parserOptions: {
+        ecmaVersion: 'latest',
+        ecmaFeatures: { jsx: true },
+        sourceType: 'module',
+      },
+    },
+    rules: {
+      'no-unused-vars': ['error', { varsIgnorePattern: '^[A-Z_]' }],
+    },
+  },
+])
+</file>
+
+<file path="index.html">
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pressed - Music landing page Generator</title>
+    <meta name="description" content="Create beautiful, minimalist Music landing pages. Privacy first - your music stays in your browser." />
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
+</file>
+
+<file path="package.json">
+{
+  "name": "pressed",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint .",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "jszip": "^3.10.1",
+    "lucide-react": "^0.564.0",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^4.1.18"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/react": "^19.2.7",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "globals": "^16.5.0",
+    "vite": "^7.3.1"
+  }
+}
+</file>
+
+<file path="README.md">
+# Pressed - Music landing page Generator
+
+Create beautiful, minimalist Music landing pages inspired by analog aesthetics. Privacy first — your music stays in your browser.
+
+## Features
+
+- **Real-time Preview**: See changes instantly as you build
+- **Responsive Design Toggle**: Preview in desktop or mobile view
+- **Audio Player**: Built-in player with progress bar and track navigation
+- **LRC Lyrics Support**: Upload .lrc files for synced lyrics display
+- **Customizable Styling**: Choose from curated font pairs and custom colors
+- **Export Options**:
+  - **ZIP Bundle**: Complete folder with index.html, assets, and deployment README
+  - **Single HTML**: Self-contained monolith file with Base64-encoded assets
+- **No Backend**: All processing happens client-side
+
+## Getting Started
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
+npm run dev
+
+# Build for production
+npm run build
+```
+
+## How to Use
+
+1. **Release Details**: Enter your artist name, release title, tagline, and about text
+2. **Artwork**: Upload your album cover (recommended 1400x1400)
+3. **Style**: Choose a font pair and customize your color palette
+4. **Tracks**: Add tracks with audio files (.mp3/.wav) and optional lyrics (.lrc)
+5. **Preview**: See your page update in real-time
+6. **Export**: Download your site as a ZIP or single HTML file
+
+## Deployment
+
+The exported site can be deployed to:
+
+- **Netlify**: Drag and drop the folder
+- **Vercel**: Upload or connect GitHub repo
+- **GitHub Pages**: Push to a repository and enable Pages
+
+## Tech Stack
+
+- React + Vite
+- Tailwind CSS
+- JSZip for export
+- Lucide React for icons
+
+## Inspiration
+
+Inspired by [halfaliveep](https://halfaliveep.iamdavehawkins.com) — minimalist, typography-focused, analog-inspired Music landing pages.
+
+---
+
+*Privacy First — Your music never leaves your browser.*
+</file>
+
+<file path="vite.config.js">
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
+import tailwindcss from '@tailwindcss/vite'
+
+// https://vite.dev/config/
+export default defineConfig({
+  plugins: [react(), tailwindcss()],
+})
+</file>
+
+</files>
