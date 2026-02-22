@@ -38,6 +38,8 @@ npm run build
 
 ## Deployment
 
+While on the main branch, run `npm run deploy` to deploy to GitHub Pages.
+
 The exported site can be deployed to:
 
 - **Netlify**: Drag and drop the folder
