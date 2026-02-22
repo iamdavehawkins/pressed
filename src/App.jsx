@@ -22,7 +22,7 @@ function MobileBlockScreen({ onContinue }) {
         </p>
         <div className="inline-flex items-center gap-2 text-zinc-500 text-sm mb-6">
           <span className="w-2 h-2 bg-amber-500 rounded-full animate-pulse"></span>
-          Waiting for a bigger screen...
+          Waiting for a bigger screen....
         </div>
         <button
           onClick={onContinue}
